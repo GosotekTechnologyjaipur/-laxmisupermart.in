@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - Laxi Super Mart</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="pages.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Mobile Drawer -->
+    <div class="drawer-overlay" id="drawer-overlay"></div>
+    <div class="mobile-drawer" id="mobile-drawer">
+        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px;">
+            <a href="index.html" class="nav-logo" style="font-size: 20px;"><i class="fas fa-leaf"></i> <span>Laxi <strong>Mart</strong></span></a>
+            <button id="close-drawer" style="background: none; font-size: 24px; color: rgba(255,255,255,0.6);"><i class="fas fa-times"></i></button>
+        </div>
+        <nav style="display: flex; flex-direction: column; gap: 4px;">
+            <a href="index.html" class="drawer-link">Home</a>
+            <a href="product.html" class="drawer-link">Shop</a>
+            <a href="about.html" class="drawer-link active">About</a>
+            <a href="stores.html" class="drawer-link">Stores</a>
+            <a href="contact.html" class="drawer-link">Contact</a>
+        </nav>
+        <div style="margin-top: auto; padding-top: 20px; border-top: 1px solid rgba(255,255,255,0.1);">
+            <p style="font-size: 13px; color: rgba(255,255,255,0.5); margin-bottom: 8px;">Contact Us</p>
+            <p style="font-weight: 700; color: var(--primary-green);">+91 98765 43210</p>
+        </div>
+    </div>
+
+    <!-- Top Announcement Bar -->
+    <div class="announcement-bar">
+        Special Offers and Free Delivery for Orders Over ₹499!
+    </div>
+
+    <!-- Header & Navigation -->
+    <header class="header-nav">
+        <div class="nav-inner">
+            <!-- Mobile Menu Button -->
+            <button class="mobile-menu-btn" id="open-drawer"><i class="fas fa-bars"></i></button>
+
+            <!-- Logo -->
+            <a href="index.html" class="nav-logo">
+                <i class="fas fa-leaf"></i>
+                <span>Laxi <strong>Mart</strong></span>
+            </a>
+
+            <!-- Center Nav Links -->
+            <nav class="nav-links">
+                <a href="index.html" class="nav-link">Home</a>
+                <a href="product.html" class="nav-link">Shop</a>
+                <a href="about.html" class="nav-link active">About</a>
+                <a href="stores.html" class="nav-link">Stores</a>
+                <a href="contact.html" class="nav-link">Contact</a>
+            </nav>
+
+            <!-- Right Section: Search, Actions, CTA -->
+            <div class="nav-right">
+                <button class="nav-search-toggle" aria-label="Search"><i class="fas fa-search"></i></button>
+                <a href="#" class="nav-icon" title="Favorites"><i class="far fa-heart"></i></a>
+                <a href="#" class="nav-icon nav-cart" title="Cart">
+                    <i class="fas fa-shopping-bag"></i>
+                    <span class="cart-badge">0</span>
+                </a>
+                <a href="product.html" class="nav-cta">Shop Now <i class="fas fa-arrow-right"></i></a>
+            </div>
+        </div>
+
+        <!-- Expandable Search Bar -->
+        <div class="nav-search-bar" id="nav-search-bar">
+            <div class="nav-search-inner">
+                <i class="fas fa-search"></i>
+                <input type="text" placeholder="Search for products, categories, brands...">
+                <button class="nav-search-close" aria-label="Close search"><i class="fas fa-times"></i></button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Page Banner -->
+    <section class="page-banner">
+        <div class="page-banner-inner">
+            <div class="breadcrumb">
+                <a href="index.html">Home</a>
+                <span class="sep">/</span>
+                <span class="current">About Us</span>
+            </div>
+            <h1>About Laxi Super Mart</h1>
+            <p>From a single neighbourhood store in Jaipur to 85+ locations across India — our story is built on freshness, affordability, and community.</p>
+        </div>
+    </section>
+
+    <main>
+        <!-- Our Story -->
+        <section class="page-section">
+            <div class="two-col">
+                <div>
+                    <h2 class="page-section-heading">Our Story</h2>
+                    <p class="page-section-sub" style="max-width: 100%;">Laxi Super Mart was founded in 2002 in Jaipur, Rajasthan, with a simple but ambitious vision: to make quality groceries affordable for every Indian household.</p>
+                    <p style="font-size: 16px; color: #6a6b76; line-height: 1.8; margin-bottom: 16px;">What began as a single neighbourhood grocery store quickly earned the trust of local families through its commitment to fresh produce, fair prices, and genuine customer care. Our founder believed that no family should have to compromise on the quality of the food they put on their table.</p>
+                    <p style="font-size: 16px; color: #6a6b76; line-height: 1.8; margin-bottom: 16px;">Over two decades, that belief has fuelled our growth from one store to a nationwide network. Today, Laxi Super Mart operates 85+ stores across 12 states, serving millions of customers every month with the same neighbourhood warmth that started it all.</p>
+                    <p style="font-size: 16px; color: #6a6b76; line-height: 1.8;">We partner directly with local farmers and producers to bring the freshest fruits, vegetables, dairy, and pantry staples to your doorstep — cutting out middlemen so you get better quality at lower prices.</p>
+                </div>
+                <div>
+                    <img src="https://images.unsplash.com/photo-1604719312566-8912e9227c6a?auto=format&fit=crop&q=80&w=600" alt="Laxi Super Mart store interior" style="width: 100%; border-radius: 16px; object-fit: cover; height: 100%;">
+                </div>
+            </div>
+        </section>
+
+        <!-- Stats Row -->
+        <section style="background: #f0fdf0;">
+            <div class="page-section" style="padding-top: 48px; padding-bottom: 48px;">
+                <div class="stats-row">
+                    <div class="stat-item">
+                        <span class="stat-number">85+</span>
+                        <span class="stat-label">Stores</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number">12</span>
+                        <span class="stat-label">States</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number">5000+</span>
+                        <span class="stat-label">Employees</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number">15+</span>
+                        <span class="stat-label">Years</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number">2.5M+</span>
+                        <span class="stat-label">Monthly Customers</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Our Values -->
+        <section class="page-section">
+            <h2 class="page-section-heading" style="text-align: center;">Our Values</h2>
+            <p class="page-section-sub" style="text-align: center; margin: 0 auto 40px;">The principles that guide every decision we make — from sourcing to shelf.</p>
+            <div class="icon-feature-grid">
+                <div class="content-card">
+                    <div class="content-card-icon">
+                        <i class="fas fa-medal"></i>
+                    </div>
+                    <h3>Quality First</h3>
+                    <p>Every product on our shelves passes rigorous quality checks. We work directly with trusted farmers and brands to guarantee freshness, purity, and safety in every item you buy.</p>
+                </div>
+                <div class="content-card">
+                    <div class="content-card-icon">
+                        <i class="fas fa-tags"></i>
+                    </div>
+                    <h3>Everyday Low Prices</h3>
+                    <p>By streamlining our supply chain and partnering directly with producers, we keep prices consistently low — not just during sales, but every single day of the year.</p>
+                </div>
+                <div class="content-card">
+                    <div class="content-card-icon">
+                        <i class="fas fa-seedling"></i>
+                    </div>
+                    <h3>Local Sourcing</h3>
+                    <p>We prioritise sourcing from local farmers and artisans in every region we operate. This supports local economies, reduces carbon footprint, and ensures peak freshness.</p>
+                </div>
+                <div class="content-card">
+                    <div class="content-card-icon">
+                        <i class="fas fa-hands-helping"></i>
+                    </div>
+                    <h3>Community Impact</h3>
+                    <p>From employing locally to sponsoring community events and food drives, we believe in giving back to the neighbourhoods that have made Laxi Super Mart what it is today.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Our Journey Timeline -->
+        <section class="page-section" style="background: #f8faf9;">
+            <div style="max-width: 1200px; margin: 0 auto;">
+                <h2 class="page-section-heading">Our Journey</h2>
+                <p class="page-section-sub">Key milestones that have shaped Laxi Super Mart over the years.</p>
+                <div class="timeline">
+                    <div class="timeline-item">
+                        <div class="timeline-year">2002</div>
+                        <div class="timeline-text">Founded our first store in Jaipur, Rajasthan — a 1,200 sq ft neighbourhood grocery shop serving 200 families daily.</div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-year">2008</div>
+                        <div class="timeline-text">Expanded operations into Gujarat with three new stores in Ahmedabad and Surat, establishing our first inter-state supply chain.</div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-year">2014</div>
+                        <div class="timeline-text">Crossed the 100-employee milestone and launched our centralised distribution hub in Jaipur, enabling faster and fresher deliveries.</div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-year">2018</div>
+                        <div class="timeline-text">Launched our online platform and mobile app, bringing the Laxi Super Mart experience to customers who prefer doorstep delivery.</div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-year">2022</div>
+                        <div class="timeline-text">Reached the 50-store milestone across 8 states, with over 3,000 employees and 1.5 million monthly customers.</div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-year">2025</div>
+                        <div class="timeline-text">Now operating 85+ stores across 12 states with 5,000+ employees, serving 2.5 million customers every month across India.</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Leadership -->
+        <section class="page-section">
+            <h2 class="page-section-heading" style="text-align: center;">Our Leadership</h2>
+            <p class="page-section-sub" style="text-align: center; margin: 0 auto 40px;">The team driving Laxi Super Mart's vision forward.</p>
+            <div class="grid-3">
+                <div class="content-card" style="text-align: center;">
+                    <div style="width: 100px; height: 100px; border-radius: 50%; background: #dff7d7; display: flex; align-items: center; justify-content: center; margin: 0 auto 20px; font-size: 40px; color: #3b9b78;">
+                        <i class="fas fa-user-tie"></i>
+                    </div>
+                    <h3>Rajesh Sharma</h3>
+                    <p style="color: #3b9b78; font-weight: 600; font-size: 14px; margin-bottom: 12px;">Chief Executive Officer</p>
+                    <p>Founded Laxi Super Mart in 2002 with a passion for making quality groceries accessible. Rajesh brings over 25 years of retail experience and continues to lead the company's growth strategy.</p>
+                </div>
+                <div class="content-card" style="text-align: center;">
+                    <div style="width: 100px; height: 100px; border-radius: 50%; background: #dff7d7; display: flex; align-items: center; justify-content: center; margin: 0 auto 20px; font-size: 40px; color: #3b9b78;">
+                        <i class="fas fa-user-tie"></i>
+                    </div>
+                    <h3>Priya Mehta</h3>
+                    <p style="color: #3b9b78; font-weight: 600; font-size: 14px; margin-bottom: 12px;">Chief Operating Officer</p>
+                    <p>Priya oversees day-to-day operations across all 85+ stores, managing supply chain, logistics, and store performance. She joined in 2010 and has been instrumental in scaling the business.</p>
+                </div>
+                <div class="content-card" style="text-align: center;">
+                    <div style="width: 100px; height: 100px; border-radius: 50%; background: #dff7d7; display: flex; align-items: center; justify-content: center; margin: 0 auto 20px; font-size: 40px; color: #3b9b78;">
+                        <i class="fas fa-user-tie"></i>
+                    </div>
+                    <h3>Arjun Patel</h3>
+                    <p style="color: #3b9b78; font-weight: 600; font-size: 14px; margin-bottom: 12px;">Chief Technology Officer</p>
+                    <p>Arjun leads the technology and digital transformation initiatives, including the online platform and mobile app. He brings 18 years of experience from leading Indian tech companies.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer style="background: #f0f5f2; padding-top: 64px;">
+        <div style="max-width: 1200px; margin: 0 auto; padding: 0 20px;">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <div style="margin-bottom: 24px; font-size: 24px; font-weight: 400; color: var(--text-dark);"><i class="fas fa-leaf" style="color: var(--primary-green);"></i> Laxi <strong>Mart</strong></div>
+                    <p style="color: var(--text-muted); margin-bottom: 24px;">Laxi Mart is India's leading online grocery store, providing the freshest produce daily across major cities.</p>
+                    <div style="display: flex; gap: 12px;">
+                        <i class="fab fa-cc-visa" style="font-size: 32px;"></i>
+                        <i class="fab fa-cc-mastercard" style="font-size: 32px;"></i>
+                        <i class="fab fa-apple-pay" style="font-size: 32px;"></i>
+                        <i class="fas fa-money-bill-wave" title="Cash on Delivery" style="font-size: 28px;"></i>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h4>Company</h4>
+                    <ul>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="careers.html">Careers</a></li>
+                        <li><a href="partner.html">Partner With Us</a></li>
+                        <li><a href="investors.html">Investors</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Shop</h4>
+                    <ul>
+                        <li><a href="product.html">Grocery</a></li>
+                        <li><a href="product.html">Fruits &amp; Vegetables</a></li>
+                        <li><a href="product.html">Dairy &amp; Frozen</a></li>
+                        <li><a href="product.html">Home Care</a></li>
+                        <li><a href="product.html">Apparel</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Legal</h4>
+                    <ul>
+                        <li><a href="privacy.html">Privacy Policy</a></li>
+                        <li><a href="terms.html">Terms of Use</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Connect</h4>
+                    <ul>
+                        <li><a href="contact.html">Contact Us</a></li>
+                        <li><a href="stores.html">Store Locator</a></li>
+                        <li>support@laximart.in</li>
+                        <li>+91 98765 43210</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <span>&copy; 2026 Laxi Super Mart. All rights reserved.</span>
+            <div class="footer-social">
+                <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                <a href="#" aria-label="X (Twitter)"><i class="fab fa-x-twitter"></i></a>
+                <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Investor Relations - Laxi Super Mart</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="pages.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Mobile Drawer -->
+    <div class="drawer-overlay" id="drawer-overlay"></div>
+    <div class="mobile-drawer" id="mobile-drawer">
+        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px;">
+            <a href="index.html" class="nav-logo" style="font-size: 20px;"><i class="fas fa-leaf"></i> <span>Laxi <strong>Mart</strong></span></a>
+            <button id="close-drawer" style="background: none; font-size: 24px; color: rgba(255,255,255,0.6);"><i class="fas fa-times"></i></button>
+        </div>
+        <nav style="display: flex; flex-direction: column; gap: 4px;">
+            <a href="index.html" class="drawer-link">Home</a>
+            <a href="product.html" class="drawer-link">Shop</a>
+            <a href="about.html" class="drawer-link">About</a>
+            <a href="stores.html" class="drawer-link">Stores</a>
+            <a href="contact.html" class="drawer-link">Contact</a>
+        </nav>
+        <div style="margin-top: auto; padding-top: 20px; border-top: 1px solid rgba(255,255,255,0.1);">
+            <p style="font-size: 13px; color: rgba(255,255,255,0.5); margin-bottom: 8px;">Contact Us</p>
+            <p style="font-weight: 700; color: var(--primary-green);">+91 98765 43210</p>
+        </div>
+    </div>
+
+    <!-- Top Announcement Bar -->
+    <div class="announcement-bar">
+        Special Offers and Free Delivery for Orders Over ₹499!
+    </div>
+
+    <!-- Header & Navigation -->
+    <header class="header-nav">
+        <div class="nav-inner">
+            <!-- Mobile Menu Button -->
+            <button class="mobile-menu-btn" id="open-drawer"><i class="fas fa-bars"></i></button>
+
+            <!-- Logo -->
+            <a href="index.html" class="nav-logo">
+                <i class="fas fa-leaf"></i>
+                <span>Laxi <strong>Mart</strong></span>
+            </a>
+
+            <!-- Center Nav Links -->
+            <nav class="nav-links">
+                <a href="index.html" class="nav-link">Home</a>
+                <a href="product.html" class="nav-link">Shop</a>
+                <a href="about.html" class="nav-link">About</a>
+                <a href="stores.html" class="nav-link">Stores</a>
+                <a href="contact.html" class="nav-link">Contact</a>
+            </nav>
+
+            <!-- Right Section: Search, Actions, CTA -->
+            <div class="nav-right">
+                <button class="nav-search-toggle" aria-label="Search"><i class="fas fa-search"></i></button>
+                <a href="#" class="nav-icon" title="Favorites"><i class="far fa-heart"></i></a>
+                <a href="#" class="nav-icon nav-cart" title="Cart">
+                    <i class="fas fa-shopping-bag"></i>
+                    <span class="cart-badge">0</span>
+                </a>
+                <a href="product.html" class="nav-cta">Shop Now <i class="fas fa-arrow-right"></i></a>
+            </div>
+        </div>
+
+        <!-- Expandable Search Bar -->
+        <div class="nav-search-bar" id="nav-search-bar">
+            <div class="nav-search-inner">
+                <i class="fas fa-search"></i>
+                <input type="text" placeholder="Search for products, categories, brands...">
+                <button class="nav-search-close" aria-label="Close search"><i class="fas fa-times"></i></button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Page Banner -->
+    <section class="page-banner">
+        <div class="page-banner-inner">
+            <div class="breadcrumb">
+                <a href="index.html">Home</a>
+                <span class="sep">/</span>
+                <span class="current">Investor Relations</span>
+            </div>
+            <h1>Investor Relations</h1>
+            <p>Transparent financial reporting and governance for our shareholders and the investment community.</p>
+        </div>
+    </section>
+
+    <main>
+        <!-- Financial Highlights -->
+        <div class="page-section">
+            <h2 class="page-section-heading">Financial Highlights</h2>
+            <p class="page-section-sub">Key performance metrics for the current financial year.</p>
+
+            <div class="stats-row">
+                <div class="stat-item">
+                    <span class="stat-number">&#8377;2,450 Cr</span>
+                    <span class="stat-label">Revenue</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number">&#8377;185 Cr</span>
+                    <span class="stat-label">Net Profit</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number">85+</span>
+                    <span class="stat-label">Stores</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number">&#8377;4,200 Cr</span>
+                    <span class="stat-label">Market Cap</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Quarterly Results -->
+        <div class="page-section" style="padding-top: 0;">
+            <h2 class="page-section-heading">Quarterly Results</h2>
+            <p class="page-section-sub">Financial performance breakdown for FY 2024-25.</p>
+
+            <div style="overflow-x: auto;">
+                <table class="data-table">
+                    <thead>
+                        <tr>
+                            <th>Quarter</th>
+                            <th>Revenue (&#8377; Cr)</th>
+                            <th>Net Profit (&#8377; Cr)</th>
+                            <th>EPS (&#8377;)</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Q1 FY25 (Apr-Jun)</td>
+                            <td>548.20</td>
+                            <td>38.50</td>
+                            <td>7.82</td>
+                        </tr>
+                        <tr>
+                            <td>Q2 FY25 (Jul-Sep)</td>
+                            <td>612.80</td>
+                            <td>45.30</td>
+                            <td>9.20</td>
+                        </tr>
+                        <tr>
+                            <td>Q3 FY25 (Oct-Dec)</td>
+                            <td>685.40</td>
+                            <td>52.70</td>
+                            <td>10.71</td>
+                        </tr>
+                        <tr>
+                            <td>Q4 FY25 (Jan-Mar)</td>
+                            <td>603.60</td>
+                            <td>48.50</td>
+                            <td>9.86</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <!-- Annual Reports -->
+        <div class="page-section" style="padding-top: 0;">
+            <h2 class="page-section-heading">Annual Reports</h2>
+            <p class="page-section-sub">Download our comprehensive annual reports and financial statements.</p>
+
+            <div class="grid-4">
+                <div class="report-card">
+                    <div style="font-size: 40px; color: #3b9b78; margin-bottom: 16px;"><i class="fas fa-file-pdf"></i></div>
+                    <h4>FY 2024-25</h4>
+                    <p>Annual Report including audited financial statements, director's report, and management discussion.</p>
+                    <a href="#"><i class="fas fa-download" style="margin-right: 4px;"></i> Download PDF</a>
+                </div>
+                <div class="report-card">
+                    <div style="font-size: 40px; color: #3b9b78; margin-bottom: 16px;"><i class="fas fa-file-pdf"></i></div>
+                    <h4>FY 2023-24</h4>
+                    <p>Annual Report including audited financial statements, director's report, and management discussion.</p>
+                    <a href="#"><i class="fas fa-download" style="margin-right: 4px;"></i> Download PDF</a>
+                </div>
+                <div class="report-card">
+                    <div style="font-size: 40px; color: #3b9b78; margin-bottom: 16px;"><i class="fas fa-file-pdf"></i></div>
+                    <h4>FY 2022-23</h4>
+                    <p>Annual Report including audited financial statements, director's report, and management discussion.</p>
+                    <a href="#"><i class="fas fa-download" style="margin-right: 4px;"></i> Download PDF</a>
+                </div>
+                <div class="report-card">
+                    <div style="font-size: 40px; color: #3b9b78; margin-bottom: 16px;"><i class="fas fa-file-pdf"></i></div>
+                    <h4>FY 2021-22</h4>
+                    <p>Annual Report including audited financial statements, director's report, and management discussion.</p>
+                    <a href="#"><i class="fas fa-download" style="margin-right: 4px;"></i> Download PDF</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Stock Information -->
+        <div class="page-section" style="padding-top: 0;">
+            <h2 class="page-section-heading">Stock Information</h2>
+            <p class="page-section-sub">Live market data for Laxi Super Mart Ltd.</p>
+
+            <div style="max-width: 560px;">
+                <div class="stock-card">
+                    <h3><i class="fas fa-chart-line" style="margin-right: 8px;"></i> Laxi Super Mart Ltd.</h3>
+                    <div class="stock-info-row">
+                        <span class="label">BSE Code</span>
+                        <span class="value">543217</span>
+                    </div>
+                    <div class="stock-info-row">
+                        <span class="label">NSE Symbol</span>
+                        <span class="value">LAXIMART</span>
+                    </div>
+                    <div class="stock-info-row">
+                        <span class="label">Last Price</span>
+                        <span class="value">&#8377;487.50</span>
+                    </div>
+                    <div class="stock-info-row">
+                        <span class="label">52-Week High</span>
+                        <span class="value">&#8377;542.00</span>
+                    </div>
+                    <div class="stock-info-row">
+                        <span class="label">52-Week Low</span>
+                        <span class="value">&#8377;312.75</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Corporate Governance -->
+        <div class="page-section" style="padding-top: 0;">
+            <h2 class="page-section-heading">Corporate Governance</h2>
+            <p class="page-section-sub">Our commitment to transparency, accountability, and ethical business practices.</p>
+
+            <div class="grid-3">
+                <div class="content-card">
+                    <div class="content-card-icon"><i class="fas fa-search-dollar"></i></div>
+                    <h3>Audit Committee</h3>
+                    <p>Oversees financial reporting, internal controls, and ensures compliance with statutory regulations. Comprised of independent directors with financial expertise, the committee reviews quarterly and annual results before board approval.</p>
+                </div>
+                <div class="content-card">
+                    <div class="content-card-icon"><i class="fas fa-user-tie"></i></div>
+                    <h3>Nomination Committee</h3>
+                    <p>Responsible for identifying and recommending candidates for board and senior management positions. Evaluates director performance, ensures board diversity, and oversees succession planning for key leadership roles.</p>
+                </div>
+                <div class="content-card">
+                    <div class="content-card-icon"><i class="fas fa-hand-holding-heart"></i></div>
+                    <h3>CSR Committee</h3>
+                    <p>Directs our corporate social responsibility initiatives including rural farmer support programs, food waste reduction, community nutrition drives, and environmental sustainability efforts across all operational regions.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- IR Contact -->
+        <div class="page-section" style="padding-top: 0;">
+            <div style="background: #f0fdf0; border-radius: 16px; padding: 40px; text-align: center;">
+                <h3 style="font-size: 24px; font-weight: 700; color: #1a3c34; margin-bottom: 12px;">Investor Relations Contact</h3>
+                <p style="font-size: 16px; color: #6a6b76; margin-bottom: 20px;">For investor queries, analyst meetings, and financial disclosures, reach out to our dedicated IR team.</p>
+                <div style="display: flex; justify-content: center; gap: 32px; flex-wrap: wrap;">
+                    <div style="display: flex; align-items: center; gap: 8px; font-size: 16px; color: #222222;">
+                        <i class="fas fa-envelope" style="color: #3b9b78;"></i>
+                        <a href="mailto:ir@laximart.in" style="color: #3b9b78; font-weight: 600; text-decoration: none;">ir@laximart.in</a>
+                    </div>
+                    <div style="display: flex; align-items: center; gap: 8px; font-size: 16px; color: #222222;">
+                        <i class="fas fa-phone" style="color: #3b9b78;"></i>
+                        <span style="font-weight: 600;">+91 98765 43211</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer style="background: #f0f5f2; padding-top: 64px;">
+        <div style="max-width: 1200px; margin: 0 auto; padding: 0 20px;">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <div style="margin-bottom: 24px; font-size: 24px; font-weight: 400; color: var(--text-dark);"><i class="fas fa-leaf" style="color: var(--primary-green);"></i> Laxi <strong>Mart</strong></div>
+                    <p style="color: var(--text-muted); margin-bottom: 24px;">Laxi Mart is India's leading online grocery store, providing the freshest produce daily across major cities.</p>
+                    <div style="display: flex; gap: 12px;">
+                        <i class="fab fa-cc-visa" style="font-size: 32px;"></i>
+                        <i class="fab fa-cc-mastercard" style="font-size: 32px;"></i>
+                        <i class="fab fa-apple-pay" style="font-size: 32px;"></i>
+                        <i class="fas fa-money-bill-wave" title="Cash on Delivery" style="font-size: 28px;"></i>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h4>Company</h4>
+                    <ul>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="careers.html">Careers</a></li>
+                        <li><a href="partner.html">Partner With Us</a></li>
+                        <li><a href="investors.html">Investors</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Shop</h4>
+                    <ul>
+                        <li><a href="product.html?category=Grocery">Grocery</a></li>
+                        <li><a href="product.html?category=Fruits">Fruits &amp; Veg</a></li>
+                        <li><a href="product.html?category=Dairy">Dairy &amp; Frozen</a></li>
+                        <li><a href="product.html?category=HomeCare">Home Care</a></li>
+                        <li><a href="product.html?category=Apparel">Apparel</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Legal</h4>
+                    <ul>
+                        <li><a href="privacy.html">Privacy Policy</a></li>
+                        <li><a href="terms.html">Terms of Use</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Connect</h4>
+                    <ul>
+                        <li><a href="contact.html">Contact Us</a></li>
+                        <li><a href="stores.html">Store Locator</a></li>
+                        <li>support@laximart.in</li>
+                        <li>+91 98765 43210</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <span>&copy; 2026 Laxi Super Mart. All rights reserved.</span>
+            <div class="footer-social">
+                <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                <a href="#" aria-label="Twitter"><i class="fab fa-x-twitter"></i></a>
+                <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
