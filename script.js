@@ -92,10 +92,10 @@ function setupInsightsCarousel() {
 // ========================================
 const products = [
     // Grocery & Staples
-    { id: 1, title: "Premium Toor Dal", weight: "1kg", price: 145, oldPrice: 170, discount: "15% OFF", image: "https://images.unsplash.com/photo-1585996959969-1a561066bab5?auto=format&fit=crop&q=80&w=300", category: "Grocery & Staples" },
-    { id: 2, title: "Basmati Rice (Aged)", weight: "5kg", price: 480, oldPrice: 560, discount: "14% OFF", image: "https://images.unsplash.com/photo-1586201375761-83865001e31c?auto=format&fit=crop&q=80&w=300", category: "Grocery & Staples" },
-    { id: 3, title: "Whole Wheat Flour", weight: "5kg", price: 210, oldPrice: 240, discount: "13% OFF", image: "https://images.unsplash.com/photo-1574323347407-f5e1ad6d020b?auto=format&fit=crop&q=80&w=300", category: "Grocery & Staples" },
-    { id: 4, title: "Sunflower Cooking Oil", weight: "1L", price: 135, oldPrice: 155, discount: "13% OFF", image: "https://images.unsplash.com/photo-1474979266404-7eaacbcd87c5?auto=format&fit=crop&q=80&w=300", category: "Grocery & Staples" },
+    { id: 1, title: "Laxi Gold Toor Dal", weight: "1kg", price: 129, oldPrice: 159, discount: "19% OFF", image: "https://images.unsplash.com/photo-1585996959969-1a561066bab5?auto=format&fit=crop&q=80&w=300", category: "Grocery & Staples" },
+    { id: 2, title: "India Gate Basmati Rice", weight: "5kg", price: 449, oldPrice: 540, discount: "17% OFF", image: "https://images.unsplash.com/photo-1586201375761-83865001e31c?auto=format&fit=crop&q=80&w=300", category: "Grocery & Staples" },
+    { id: 3, title: "Aashirvaad Whole Wheat Atta", weight: "5kg", price: 199, oldPrice: 235, discount: "15% OFF", image: "https://images.unsplash.com/photo-1574323347407-f5e1ad6d020b?auto=format&fit=crop&q=80&w=300", category: "Grocery & Staples" },
+    { id: 4, title: "Fortune Sunlite Oil", weight: "1L", price: 119, oldPrice: 145, discount: "18% OFF", image: "https://images.unsplash.com/photo-1474979266404-7eaacbcd87c5?auto=format&fit=crop&q=80&w=300", category: "Grocery & Staples" },
     // Fruits & Vegetables
     { id: 5, title: "Fresh Organic Broccoli", weight: "500g", price: 120, oldPrice: 150, discount: "20% OFF", image: "https://images.unsplash.com/photo-1584270354949-c26b0d5b4a0c?auto=format&fit=crop&q=80&w=300", category: "Fruits & Vegetables" },
     { id: 6, title: "Red Gala Apples", weight: "1kg", price: 180, oldPrice: 220, discount: "18% OFF", image: "https://images.unsplash.com/photo-1560806887-1e4cd0b6bcd6?auto=format&fit=crop&q=80&w=300", category: "Fruits & Vegetables" },
@@ -107,9 +107,9 @@ const products = [
     { id: 11, title: "Brown Eggs (Dozen)", weight: "12 units", price: 90, oldPrice: 110, discount: "18% OFF", image: "https://images.unsplash.com/photo-1582722872445-44ad5c78a9dd?auto=format&fit=crop&q=80&w=300", category: "Dairy & Frozen" },
     { id: 12, title: "Frozen Green Peas", weight: "500g", price: 65, oldPrice: 80, discount: "19% OFF", image: "https://images.unsplash.com/photo-1563636619-e91000f21fca?auto=format&fit=crop&q=80&w=300", category: "Dairy & Frozen" },
     // Home & Personal Care
-    { id: 13, title: "Liquid Detergent", weight: "1L", price: 195, oldPrice: 230, discount: "15% OFF", image: "https://images.unsplash.com/photo-1585421514284-efb74c2b69ba?auto=format&fit=crop&q=80&w=300", category: "Home & Personal Care" },
-    { id: 14, title: "Herbal Shampoo", weight: "200ml", price: 165, oldPrice: 199, discount: "17% OFF", image: "https://images.unsplash.com/photo-1631729371254-42c2892f0e6e?auto=format&fit=crop&q=80&w=300", category: "Home & Personal Care" },
-    { id: 15, title: "Antibacterial Hand Wash", weight: "250ml", price: 75, oldPrice: 90, discount: "17% OFF", image: "https://images.unsplash.com/photo-1584305574647-0cc949a2bb9f?auto=format&fit=crop&q=80&w=300", category: "Home & Personal Care" },
+    { id: 13, title: "Surf Excel Matic Liquid", weight: "1L", price: 189, oldPrice: 225, discount: "16% OFF", image: "https://images.unsplash.com/photo-1585421514284-efb74c2b69ba?auto=format&fit=crop&q=80&w=300", category: "Home & Personal Care" },
+    { id: 14, title: "Dove Daily Shine Shampoo", weight: "340ml", price: 175, oldPrice: 210, discount: "17% OFF", image: "https://images.unsplash.com/photo-1631729371254-42c2892f0e6e?auto=format&fit=crop&q=80&w=300", category: "Home & Personal Care" },
+    { id: 15, title: "Dettol Handwash Pump", weight: "250ml", price: 69, oldPrice: 85, discount: "19% OFF", image: "https://images.unsplash.com/photo-1584305574647-0cc949a2bb9f?auto=format&fit=crop&q=80&w=300", category: "Home & Personal Care" },
     // Bed & Bath
     { id: 16, title: "Cotton Bath Towel Set", weight: "2 pcs", price: 450, oldPrice: 599, discount: "25% OFF", image: "https://images.unsplash.com/photo-1616627561950-9f746e330187?auto=format&fit=crop&q=80&w=300", category: "Bed & Bath" },
     { id: 17, title: "Premium Bed Sheet Set", weight: "Double", price: 899, oldPrice: 1200, discount: "25% OFF", image: "https://images.unsplash.com/photo-1522771739844-6a9f6d5f14af?auto=format&fit=crop&q=80&w=300", category: "Bed & Bath" },
