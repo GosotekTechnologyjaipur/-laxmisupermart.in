@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Laxi Super Mart - Fresh Groceries Delivered</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Mobile Drawer -->
+    <div class="drawer-overlay" id="drawer-overlay"></div>
+    <div class="mobile-drawer" id="mobile-drawer">
+        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px;">
+            <a href="index.html" class="nav-logo" style="font-size: 20px;"><i class="fas fa-leaf"></i> <span>Laxi <strong>Mart</strong></span></a>
+            <button id="close-drawer" style="background: none; font-size: 24px; color: rgba(255,255,255,0.6);"><i class="fas fa-times"></i></button>
+        </div>
+        <nav style="display: flex; flex-direction: column; gap: 4px;">
+            <a href="#" class="drawer-link active">Home</a>
+            <a href="product.html" class="drawer-link">Products</a>
+            <a href="#" class="drawer-link">Categories</a>
+            <a href="#" class="drawer-link">Best Sellers</a>
+            <a href="#" class="drawer-link">Offers</a>
+            <a href="#" class="drawer-link">New Arrivals</a>
+        </nav>
+        <div style="margin-top: auto; padding-top: 20px; border-top: 1px solid rgba(255,255,255,0.1);">
+            <p style="font-size: 13px; color: rgba(255,255,255,0.5); margin-bottom: 8px;">Contact Us</p>
+            <p style="font-weight: 700; color: var(--primary-green);">+91 98765 43210</p>
+        </div>
+    </div>
+
+    <!-- Top Announcement Bar -->
+    <div class="announcement-bar">
+        Special Offers and Free Delivery for Orders Over ₹499!
+    </div>
+
+    <!-- Header & Navigation -->
+    <header class="header-nav">
+        <div class="nav-inner">
+            <!-- Mobile Menu Button -->
+            <button class="mobile-menu-btn" id="open-drawer"><i class="fas fa-bars"></i></button>
+
+            <!-- Logo -->
+            <a href="index.html" class="nav-logo">
+                <i class="fas fa-leaf"></i>
+                <span>Laxi <strong>Mart</strong></span>
+            </a>
+
+            <!-- Center Nav Links -->
+            <nav class="nav-links">
+                <a href="#" class="nav-link active">Home</a>
+                <a href="product.html" class="nav-link">Products</a>
+                <a href="#" class="nav-link">Categories</a>
+                <a href="#" class="nav-link">Best Sellers</a>
+                <a href="#" class="nav-link">Offers</a>
+            </nav>
+
+            <!-- Right Section: Search, Actions, CTA -->
+            <div class="nav-right">
+                <button class="nav-search-toggle" aria-label="Search"><i class="fas fa-search"></i></button>
+                <a href="#" class="nav-icon" title="Favorites"><i class="far fa-heart"></i></a>
+                <a href="#" class="nav-icon nav-cart" title="Cart">
+                    <i class="fas fa-shopping-bag"></i>
+                    <span class="cart-badge">0</span>
+                </a>
+                <a href="#" class="nav-cta">Shop Now <i class="fas fa-arrow-right"></i></a>
+            </div>
+        </div>
+
+        <!-- Expandable Search Bar -->
+        <div class="nav-search-bar" id="nav-search-bar">
+            <div class="nav-search-inner">
+                <i class="fas fa-search"></i>
+                <input type="text" placeholder="Search for products, categories, brands...">
+                <button class="nav-search-close" aria-label="Close search"><i class="fas fa-times"></i></button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section — Full viewport, video bg, bottom-left content -->
+    <section class="hero-fullscreen">
+        <!-- Background Video -->
+        <video autoplay muted loop playsinline class="hero-video-bg">
+            <source src="https://assets.mixkit.co/videos/preview/mixkit-fresh-vegetables-in-a-market-40142-large.mp4" type="video/mp4">
+        </video>
+
+        <!-- Gradient Overlay -->
+        <div class="hero-gradient"></div>
+
+        <!-- Hero Content — bottom-left aligned -->
+        <div class="hero-body">
+            <span class="hero-eyebrow"><i class="fas fa-bolt"></i> Express Delivery in 15 Mins</span>
+            <h1 class="hero-headline">Let's get<br>fresh today.</h1>
+            <p class="hero-copy">Fresh groceries for all households — organic produce, premium meats, and daily essentials from local farmers across India.</p>
+            <div class="hero-ctas">
+                <a href="product.html" class="hero-btn-primary">Start Shopping <span class="hero-btn-arrow">→</span></a>
+                <a href="#categories" class="hero-btn-ghost">Explore Categories</a>
+            </div>
+            <div class="hero-scroll-hint">Scroll to explore <span>↓</span></div>
+        </div>
+    </section>
+
+    <main class="container">
+
+        <!-- What's New Section -->
+        <section class="whats-new-section">
+            <h2 class="whats-new-heading">What's new</h2>
+            <div class="whats-new-grid">
+                <a href="product.html" class="whats-new-card">
+                    <div class="whats-new-img">
+                        <img src="https://images.unsplash.com/photo-1610832958506-aa56368176cf?auto=format&fit=crop&q=80&w=400" alt="Seasonal Fruits">
+                    </div>
+                    <div class="whats-new-info">
+                        <span class="whats-new-tag">Just Arrived</span>
+                        <h3>Seasonal Fruit Box</h3>
+                        <p>Hand-picked organic mangoes, lychees & berries — fresh from the farm this week.</p>
+                        <span class="whats-new-link">Shop now <i class="fas fa-arrow-right"></i></span>
+                    </div>
+                </a>
+                <a href="product.html" class="whats-new-card">
+                    <div class="whats-new-img">
+                        <img src="https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?auto=format&fit=crop&q=80&w=400" alt="Organic Dairy">
+                    </div>
+                    <div class="whats-new-info">
+                        <span class="whats-new-tag">New Partner</span>
+                        <h3>Farm-Fresh A2 Dairy</h3>
+                        <p>Pure A2 cow milk, paneer & curd from certified organic farms — now on Laxi Mart.</p>
+                        <span class="whats-new-link">Shop now <i class="fas fa-arrow-right"></i></span>
+                    </div>
+                </a>
+                <a href="product.html" class="whats-new-card">
+                    <div class="whats-new-img">
+                        <img src="https://images.unsplash.com/photo-1509440159596-0249088772ff?auto=format&fit=crop&q=80&w=400" alt="Artisan Bakery">
+                    </div>
+                    <div class="whats-new-info">
+                        <span class="whats-new-tag">Limited Edition</span>
+                        <h3>Artisan Sourdough Collection</h3>
+                        <p>Freshly baked sourdough, multigrain & rye loaves from local bakers — order before noon.</p>
+                        <span class="whats-new-link">Shop now <i class="fas fa-arrow-right"></i></span>
+                    </div>
+                </a>
+            </div>
+        </section>
+
+        <!-- Split Stats Section -->
+        <section class="split-stats">
+            <div class="split-stats-text">
+                <h2 class="split-stats-headline">Turn everyday grocery runs into fresh savings</h2>
+                <p class="split-stats-copy">We help families across India get the freshest produce delivered to their doorstep — from local farms to your kitchen — with data-driven deals that save more every week.</p>
+            </div>
+            <div class="split-stats-card">
+                <div class="split-stats-card-inner">
+                    <span class="split-stats-number">~2.5M</span>
+                    <p class="split-stats-desc">Put your groceries in the hands of approximately <strong>2.5 million customers</strong> who shop on Laxi Mart online and in stores each week.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Grow Section Heading -->
+        <section class="grow-section">
+            <h2 class="grow-heading">Grow your kitchen with the freshness, quality and variety only Laxi Mart can deliver</h2>
+        </section>
+
+        <!-- Feature Cards — reversed split layout -->
+        <section class="feature-splits">
+            <!-- Feature 1: Image left, text right -->
+            <div class="feature-split-row">
+                <div class="feature-split-media">
+                    <video autoplay muted loop playsinline class="feature-split-video">
+                        <source src="https://assets.mixkit.co/videos/preview/mixkit-putting-fruits-in-a-basket-in-a-market-40144-large.mp4" type="video/mp4">
+                    </video>
+                </div>
+                <div class="feature-split-content">
+                    <h3 class="feature-split-title">Expansive reach to deliver freshness everywhere</h3>
+                    <p class="feature-split-desc">Turn your grocery list into a seamless experience with options — from farm-fresh produce to pantry staples — aligned to every meal of your family's daily routine.</p>
+                    <a href="product.html" class="feature-split-link">Explore products <i class="fas fa-arrow-right"></i></a>
+                </div>
+            </div>
+
+            <!-- Feature 2: Text left, image right (reversed) -->
+            <div class="feature-split-row reversed">
+                <div class="feature-split-media">
+                    <img src="https://images.unsplash.com/photo-1542838132-92c53300491e?auto=format&fit=crop&q=80&w=600" alt="Fresh grocery delivery">
+                </div>
+                <div class="feature-split-content">
+                    <h3 class="feature-split-title">Lightning-fast delivery powered by local networks</h3>
+                    <p class="feature-split-desc">Our hyper-local delivery network ensures your groceries arrive fresh within 30 minutes — straight from nearby stores and farms to your doorstep.</p>
+                    <a href="product.html" class="feature-split-link">Learn more <i class="fas fa-arrow-right"></i></a>
+                </div>
+            </div>
+
+            <!-- Feature 3: Text left, video right — "Solutions that launch with ease" -->
+            <div class="feature-split-row">
+                <div class="feature-split-media">
+                    <img src="https://images.unsplash.com/photo-1604719312566-8912e9227c6a?auto=format&fit=crop&q=80&w=600" alt="Easy grocery ordering on phone">
+                </div>
+                <div class="feature-split-content">
+                    <h3 class="feature-split-title">Solutions that launch with ease and flexibility</h3>
+                    <p class="feature-split-desc">Browse and order with our intuitive app — smart recommendations, one-tap reorders, and flexible delivery slots that fit your schedule. It's grocery shopping made effortless.</p>
+                    <a href="product.html" class="feature-split-cta">Explore products</a>
+                </div>
+            </div>
+
+            <!-- Feature 4: Image left, text right (reversed) — "Data signals you can count on" -->
+            <div class="feature-split-row reversed">
+                <div class="feature-split-media feature-split-media--chart">
+                    <div class="chart-visual">
+                        <div class="chart-header">
+                            <div class="chart-stat">
+                                <span class="chart-dot" style="background: var(--primary-green);"></span>
+                                <span class="chart-label">Orders</span>
+                                <strong>23,456,031</strong>
+                            </div>
+                            <div class="chart-stat">
+                                <span class="chart-dot" style="background: #7ec8a8;"></span>
+                                <span class="chart-label">Deliveries</span>
+                                <strong>92,725</strong>
+                            </div>
+                            <div class="chart-stat">
+                                <span class="chart-dot" style="background: #dff7d7;"></span>
+                                <span class="chart-label">Savings</span>
+                                <strong>₹45,887</strong>
+                            </div>
+                        </div>
+                        <div class="chart-bars">
+                            <div class="chart-bar-group">
+                                <div class="chart-bar" style="height: 60%; background: linear-gradient(to top, var(--primary-green), #7ec8a8);"></div>
+                                <div class="chart-bar" style="height: 45%; background: linear-gradient(to top, #7ec8a8, #b5e6cc);"></div>
+                                <div class="chart-bar" style="height: 80%; background: linear-gradient(to top, #1a3c34, var(--primary-green));"></div>
+                            </div>
+                            <div class="chart-bar-group">
+                                <div class="chart-bar" style="height: 75%; background: linear-gradient(to top, var(--primary-green), #7ec8a8);"></div>
+                                <div class="chart-bar" style="height: 55%; background: linear-gradient(to top, #7ec8a8, #b5e6cc);"></div>
+                                <div class="chart-bar" style="height: 90%; background: linear-gradient(to top, #1a3c34, var(--primary-green));"></div>
+                            </div>
+                            <div class="chart-bar-group">
+                                <div class="chart-bar" style="height: 50%; background: linear-gradient(to top, var(--primary-green), #7ec8a8);"></div>
+                                <div class="chart-bar" style="height: 70%; background: linear-gradient(to top, #7ec8a8, #b5e6cc);"></div>
+                                <div class="chart-bar" style="height: 65%; background: linear-gradient(to top, #1a3c34, var(--primary-green));"></div>
+                            </div>
+                            <div class="chart-bar-group">
+                                <div class="chart-bar" style="height: 85%; background: linear-gradient(to top, var(--primary-green), #7ec8a8);"></div>
+                                <div class="chart-bar" style="height: 60%; background: linear-gradient(to top, #7ec8a8, #b5e6cc);"></div>
+                                <div class="chart-bar" style="height: 95%; background: linear-gradient(to top, #1a3c34, var(--primary-green));"></div>
+                            </div>
+                            <div class="chart-bar-group">
+                                <div class="chart-bar" style="height: 70%; background: linear-gradient(to top, var(--primary-green), #7ec8a8);"></div>
+                                <div class="chart-bar" style="height: 80%; background: linear-gradient(to top, #7ec8a8, #b5e6cc);"></div>
+                                <div class="chart-bar" style="height: 100%; background: linear-gradient(to top, #1a3c34, var(--primary-green));"></div>
+                            </div>
+                        </div>
+                        <p class="chart-disclaimer">Illustrative data for demonstration purposes</p>
+                    </div>
+                </div>
+                <div class="feature-split-content">
+                    <h3 class="feature-split-title">Data insights you can count on</h3>
+                    <p class="feature-split-desc">Tap into real-time order data, delivery analytics, and spending patterns to help you make smarter shopping decisions and optimize your grocery budget with precision.</p>
+                    <a href="#" class="feature-split-cta">Learn about smart savings</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Insights Carousel -->
+        <section class="insights-section">
+            <div class="insights-header">
+                <h2 class="insights-heading">Insights and stories to inspire your next meal</h2>
+                <div class="insights-nav">
+                    <span class="insights-counter"><span class="insights-counter-current">1</span> / <span class="insights-counter-total">4</span></span>
+                    <button class="insights-btn insights-prev" aria-label="Previous" disabled><i class="fas fa-arrow-left"></i></button>
+                    <button class="insights-btn insights-next" aria-label="Next"><i class="fas fa-arrow-right"></i></button>
+                </div>
+            </div>
+            <div class="insights-track-wrapper">
+                <div class="insights-track" id="insights-track">
+                    <a href="#" class="insight-card">
+                        <img src="https://images.unsplash.com/photo-1490818387583-1baba5e638af?auto=format&fit=crop&q=80&w=600" alt="Healthy meals" class="insight-card-bg">
+                        <span class="insight-card-tag">Recipe Guide</span>
+                        <div class="insight-card-bottom">
+                            <span class="insight-card-eyebrow">Healthy Eating</span>
+                            <h3 class="insight-card-title">10 Quick Weeknight Meals with Fresh Produce</h3>
+                            <div class="insight-card-stat">
+                                <span class="insight-card-stat-num">15<span class="insight-card-stat-unit">min</span></span>
+                                <span class="insight-card-stat-label">Avg. cook time</span>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="#" class="insight-card">
+                        <img src="https://images.unsplash.com/photo-1607623814075-e51df1bdc822?auto=format&fit=crop&q=80&w=600" alt="Premium meat" class="insight-card-bg">
+                        <span class="insight-card-tag">Sourcing Story</span>
+                        <div class="insight-card-bottom">
+                            <span class="insight-card-eyebrow">Farm to Table</span>
+                            <h3 class="insight-card-title">How We Source Premium Meat from Trusted Farms</h3>
+                        </div>
+                    </a>
+                    <a href="#" class="insight-card">
+                        <img src="https://images.unsplash.com/photo-1573246123716-6b1782bfc499?auto=format&fit=crop&q=80&w=600" alt="Organic farming" class="insight-card-bg">
+                        <span class="insight-card-tag">Article</span>
+                        <div class="insight-card-bottom">
+                            <span class="insight-card-eyebrow">Sustainability</span>
+                            <h3 class="insight-card-title">Why Organic Matters — A Guide to Cleaner Groceries</h3>
+                            <div class="insight-card-stat">
+                                <span class="insight-card-stat-num">40<span class="insight-card-stat-unit">%</span></span>
+                                <span class="insight-card-stat-label">Less pesticide exposure</span>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="#" class="insight-card">
+                        <img src="https://images.unsplash.com/photo-1556742393-d75f468bfcb0?auto=format&fit=crop&q=80&w=600" alt="Saving tips" class="insight-card-bg">
+                        <span class="insight-card-tag">Tips</span>
+                        <div class="insight-card-bottom">
+                            <span class="insight-card-eyebrow">Smart Shopping</span>
+                            <h3 class="insight-card-title">How Families Saved 68% on Monthly Groceries with Laxi Mart</h3>
+                            <div class="insight-card-stat">
+                                <span class="insight-card-stat-num">68<span class="insight-card-stat-unit">%</span></span>
+                                <span class="insight-card-stat-label">Savings on monthly grocery bills</span>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="container">
+        <div class="footer-grid">
+            <div class="footer-col">
+                <div style="margin-bottom: 24px; font-size: 24px; font-weight: 400; color: var(--text-dark);"><i class="fas fa-leaf" style="color: var(--primary-green);"></i> Laxi <strong>Mart</strong></div>
+                <p style="color: var(--text-muted); margin-bottom: 24px;">Laxi Mart is India's leading online grocery store, providing the freshest produce daily across major cities.</p>
+                <div style="display: flex; gap: 12px;">
+                    <i class="fab fa-cc-visa" style="font-size: 32px;"></i>
+                    <i class="fab fa-cc-mastercard" style="font-size: 32px;"></i>
+                    <i class="fab fa-apple-pay" style="font-size: 32px;"></i>
+                    <i class="fas fa-money-bill-wave" title="Cash on Delivery" style="font-size: 28px;"></i>
+                </div>
+            </div>
+            <div class="footer-col">
+                <h4>Company</h4>
+                <ul>
+                    <li><a href="#">About Us</a></li>
+                    <li><a href="#">Careers</a></li>
+                    <li><a href="#">Blog</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Services</h4>
+                <ul>
+                    <li><a href="#">Delivery Info</a></li>
+                    <li><a href="#">Return Policy</a></li>
+                    <li><a href="#">Terms</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Help</h4>
+                <ul>
+                    <li><a href="#">FAQ</a></li>
+                    <li><a href="#">Contact Us</a></li>
+                    <li><a href="#">Track Order</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Contact</h4>
+                <ul>
+                    <li>Email: support@laximart.in</li>
+                    <li>Phone: +91 98765 43210</li>
+                    <li>Address: New Delhi, India</li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
