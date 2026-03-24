@@ -10,406 +10,6 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <style>
-        /* ========================================
-           LANDING PAGE — DMart Corporate Style
-           ======================================== */
-
-        /* Security Warning Bar */
-        .security-bar {
-            background: #fff8e1;
-            border-bottom: 1px solid #ffe082;
-            padding: 10px 20px;
-            overflow: hidden;
-        }
-        .security-bar-text {
-            display: flex;
-            animation: scrollText 30s linear infinite;
-            white-space: nowrap;
-            font-size: 13px;
-            color: #8d6e00;
-            font-weight: 500;
-            gap: 80px;
-        }
-        @keyframes scrollText {
-            from { transform: translateX(0); }
-            to { transform: translateX(-50%); }
-        }
-
-        /* Hero */
-        .corp-hero {
-            position: relative;
-            height: 480px;
-            overflow: hidden;
-            display: flex;
-            align-items: center;
-        }
-        .corp-hero img {
-            position: absolute;
-            inset: 0;
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            z-index: 1;
-        }
-        .corp-hero::after {
-            content: '';
-            position: absolute;
-            inset: 0;
-            z-index: 2;
-            background: linear-gradient(135deg, rgba(26,60,52,0.92) 0%, rgba(26,60,52,0.6) 60%, rgba(26,60,52,0.3) 100%);
-        }
-        .corp-hero-inner {
-            position: relative;
-            z-index: 3;
-            max-width: 1200px;
-            width: 100%;
-            margin: 0 auto;
-            padding: 0 20px;
-        }
-        .corp-hero h1 {
-            font-size: 60px;
-            font-weight: 300;
-            color: #fff;
-            line-height: 1.05;
-            letter-spacing: -1px;
-            margin-bottom: 16px;
-        }
-        .corp-hero h1 strong { font-weight: 800; }
-        .corp-hero-sub {
-            font-size: 19px;
-            color: rgba(255,255,255,0.7);
-            max-width: 500px;
-            line-height: 1.6;
-            margin-bottom: 32px;
-        }
-        .corp-hero-ctas {
-            display: flex;
-            gap: 14px;
-            flex-wrap: wrap;
-        }
-        .corp-hero-ctas a {
-            padding: 14px 32px;
-            border-radius: 100px;
-            font-size: 15px;
-            font-weight: 600;
-            text-decoration: none;
-            transition: all 0.25s;
-        }
-        .btn-hero-primary {
-            background: #fff;
-            color: #1a3c34;
-            border: 2px solid #fff;
-        }
-        .btn-hero-primary:hover { background: transparent; color: #fff; }
-        .btn-hero-outline {
-            background: transparent;
-            color: #fff;
-            border: 1px solid rgba(255,255,255,0.35);
-        }
-        .btn-hero-outline:hover { border-color: rgba(255,255,255,0.7); background: rgba(255,255,255,0.08); }
-
-        /* Quick Links Section */
-        .quick-links {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 64px 20px;
-        }
-        .quick-links h2 {
-            font-size: 36px;
-            font-weight: 300;
-            color: #1a3c34;
-            letter-spacing: -0.4px;
-            margin-bottom: 36px;
-        }
-        .ql-grid {
-            display: grid;
-            grid-template-columns: repeat(4, 1fr);
-            gap: 20px;
-        }
-        .ql-card {
-            border: 1px solid #e8efe8;
-            border-radius: 20px;
-            padding: 36px 28px;
-            background: #f9fbf9;
-            transition: all 0.3s;
-            text-decoration: none;
-            color: inherit;
-            display: flex;
-            flex-direction: column;
-            gap: 14px;
-        }
-        .ql-card:hover {
-            background: #fff;
-            border-color: #3b9b78;
-            box-shadow: 0 12px 32px rgba(59,155,120,0.08);
-            transform: translateY(-4px);
-        }
-        .ql-icon {
-            width: 56px;
-            height: 56px;
-            border-radius: 16px;
-            background: #dff7d7;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 24px;
-            color: #3b9b78;
-            transition: all 0.25s;
-        }
-        .ql-card:hover .ql-icon { background: #3b9b78; color: #fff; }
-        .ql-label {
-            font-size: 11px;
-            font-weight: 700;
-            text-transform: uppercase;
-            letter-spacing: 1.5px;
-            color: #3b9b78;
-        }
-        .ql-card h3 {
-            font-size: 20px;
-            font-weight: 700;
-            color: #222;
-        }
-        .ql-card p {
-            font-size: 14px;
-            color: #6a6b76;
-            line-height: 1.5;
-        }
-        .ql-arrow {
-            font-size: 14px;
-            font-weight: 600;
-            color: #3b9b78;
-            display: flex;
-            align-items: center;
-            gap: 6px;
-            margin-top: auto;
-        }
-        .ql-arrow i { transition: transform 0.2s; }
-        .ql-card:hover .ql-arrow i { transform: translateX(4px); }
-
-        /* New Stores Section */
-        .new-stores {
-            background: #f8faf9;
-            padding: 64px 20px;
-        }
-        .new-stores-inner {
-            max-width: 1200px;
-            margin: 0 auto;
-        }
-        .new-stores-inner h2 {
-            font-size: 36px;
-            font-weight: 300;
-            color: #1a3c34;
-            letter-spacing: -0.4px;
-            margin-bottom: 36px;
-        }
-        .ns-grid {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 20px;
-        }
-        .ns-card {
-            background: #fff;
-            border: 1px solid #e8efe8;
-            border-radius: 16px;
-            padding: 28px;
-            display: flex;
-            align-items: flex-start;
-            gap: 16px;
-            transition: all 0.3s;
-        }
-        .ns-card:hover {
-            border-color: #3b9b78;
-            box-shadow: 0 6px 20px rgba(59,155,120,0.06);
-        }
-        .ns-pin {
-            width: 44px;
-            height: 44px;
-            border-radius: 12px;
-            background: #dff7d7;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 18px;
-            color: #3b9b78;
-            flex-shrink: 0;
-        }
-        .ns-card h4 {
-            font-size: 17px;
-            font-weight: 700;
-            color: #222;
-            margin-bottom: 4px;
-        }
-        .ns-card p {
-            font-size: 14px;
-            color: #6a6b76;
-        }
-        .ns-badge {
-            display: inline-block;
-            margin-top: 8px;
-            padding: 3px 10px;
-            background: #dff7d7;
-            color: #1a3c34;
-            border-radius: 20px;
-            font-size: 11px;
-            font-weight: 700;
-            text-transform: uppercase;
-            letter-spacing: 0.5px;
-        }
-
-        /* Store Categories */
-        .store-cats {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 64px 20px;
-        }
-        .store-cats h2 {
-            font-size: 36px;
-            font-weight: 300;
-            color: #1a3c34;
-            letter-spacing: -0.4px;
-            margin-bottom: 36px;
-        }
-        .sc-grid {
-            display: grid;
-            grid-template-columns: repeat(4, 1fr);
-            gap: 14px;
-        }
-        .sc-item {
-            display: flex;
-            align-items: center;
-            gap: 12px;
-            padding: 16px 20px;
-            background: #f9fbf9;
-            border: 1px solid #e8efe8;
-            border-radius: 12px;
-            font-size: 14px;
-            font-weight: 600;
-            color: #1a3c34;
-            transition: all 0.2s;
-            cursor: default;
-        }
-        .sc-item:hover {
-            background: #fff;
-            border-color: #3b9b78;
-            box-shadow: 0 4px 12px rgba(59,155,120,0.06);
-        }
-        .sc-item i {
-            font-size: 18px;
-            color: #3b9b78;
-            width: 24px;
-            text-align: center;
-        }
-
-        /* CSR Section */
-        .csr-banner {
-            background: linear-gradient(135deg, #1a3c34, #2d6b54);
-            padding: 64px 20px;
-        }
-        .csr-inner {
-            max-width: 1200px;
-            margin: 0 auto;
-            display: flex;
-            align-items: center;
-            gap: 48px;
-        }
-        .csr-icon-block {
-            width: 100px;
-            height: 100px;
-            border-radius: 24px;
-            background: rgba(255,255,255,0.1);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 44px;
-            color: #dff7d7;
-            flex-shrink: 0;
-        }
-        .csr-content h3 {
-            font-size: 28px;
-            font-weight: 300;
-            color: #fff;
-            margin-bottom: 12px;
-        }
-        .csr-content p {
-            font-size: 16px;
-            color: rgba(255,255,255,0.65);
-            line-height: 1.6;
-            max-width: 600px;
-        }
-
-        /* Contact Strip */
-        .contact-strip {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 64px 20px;
-        }
-        .contact-strip h2 {
-            font-size: 36px;
-            font-weight: 300;
-            color: #1a3c34;
-            letter-spacing: -0.4px;
-            margin-bottom: 32px;
-        }
-        .cs-row {
-            display: flex;
-            gap: 24px;
-            flex-wrap: wrap;
-        }
-        .cs-item {
-            flex: 1;
-            min-width: 250px;
-            display: flex;
-            align-items: flex-start;
-            gap: 16px;
-            padding: 24px;
-            background: #f0fdf0;
-            border-radius: 16px;
-        }
-        .cs-item-icon {
-            width: 48px;
-            height: 48px;
-            background: #3b9b78;
-            color: #fff;
-            border-radius: 12px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 20px;
-            flex-shrink: 0;
-        }
-        .cs-item h4 {
-            font-size: 15px;
-            font-weight: 700;
-            color: #222;
-            margin-bottom: 4px;
-        }
-        .cs-item p {
-            font-size: 14px;
-            color: #6a6b76;
-            line-height: 1.5;
-        }
-
-        /* Responsive */
-        @media (max-width: 1024px) {
-            .ql-grid { grid-template-columns: repeat(2, 1fr); }
-            .sc-grid { grid-template-columns: repeat(3, 1fr); }
-        }
-        @media (max-width: 768px) {
-            .corp-hero { height: 380px; }
-            .corp-hero h1 { font-size: 36px; }
-            .corp-hero-sub { font-size: 16px; }
-            .ql-grid, .ns-grid { grid-template-columns: 1fr; }
-            .sc-grid { grid-template-columns: repeat(2, 1fr); }
-            .csr-inner { flex-direction: column; text-align: center; gap: 24px; }
-            .csr-content p { max-width: 100%; }
-            .cs-row { flex-direction: column; }
-        }
-        @media (max-width: 480px) {
-            .corp-hero h1 { font-size: 30px; }
-            .sc-grid { grid-template-columns: 1fr; }
-        }
-    </style>
 </head>
 <body>
     <!-- Mobile Drawer -->
@@ -429,20 +29,21 @@
             <a href="contact.html" class="drawer-link">Contact Us</a>
         </nav>
         <div style="margin-top: auto; padding-top: 20px; border-top: 1px solid rgba(255,255,255,0.1);">
-            <p style="font-size: 13px; color: rgba(255,255,255,0.5); margin-bottom: 8px;">Contact Us</p>
+            <p style="font-size: 13px; color: rgba(255,255,255,0.5); margin-bottom: 8px;">Toll-Free</p>
             <p style="font-weight: 700; color: var(--primary-green);">1800-123-4567</p>
         </div>
     </div>
 
-    <!-- Security Warning Ticker -->
-    <div class="security-bar">
-        <div class="security-bar-text">
-            <span><i class="fas fa-shield-alt"></i> &nbsp; Dear Customers — Our offers, promotions, and customer care contact details are published only on our official website (www.laximart.in) and at our stores. Please do not call unknown numbers or click on suspicious links. These could be phishing attempts. Stay safe.</span>
-            <span><i class="fas fa-shield-alt"></i> &nbsp; Dear Customers — Our offers, promotions, and customer care contact details are published only on our official website (www.laximart.in) and at our stores. Please do not call unknown numbers or click on suspicious links. These could be phishing attempts. Stay safe.</span>
+    <!-- Security Warning Ticker (DMart-style) -->
+    <div style="background: #fff8e1; border-bottom: 1px solid #ffe082; padding: 10px 20px; overflow: hidden;">
+        <div style="display: flex; animation: secScroll 35s linear infinite; white-space: nowrap; font-size: 13px; color: #8d6e00; font-weight: 500; gap: 100px;">
+            <span><i class="fas fa-shield-alt"></i> &nbsp; Dear Customers — Our offers, promotions, and customer care details are published only on our official website (www.laximart.in) and at our stores. Please do not call unknown numbers or click suspicious links. These could be phishing attempts.</span>
+            <span><i class="fas fa-shield-alt"></i> &nbsp; Dear Customers — Our offers, promotions, and customer care details are published only on our official website (www.laximart.in) and at our stores. Please do not call unknown numbers or click suspicious links. These could be phishing attempts.</span>
         </div>
     </div>
+    <style>@keyframes secScroll { from { transform: translateX(0); } to { transform: translateX(-50%); } }</style>
 
-    <!-- Header -->
+    <!-- Header & Navigation -->
     <header class="header-nav">
         <div class="nav-inner">
             <button class="mobile-menu-btn" id="open-drawer"><i class="fas fa-bars"></i></button>
@@ -468,177 +69,238 @@
         </div>
     </header>
 
-    <!-- Hero -->
-    <section class="corp-hero">
-        <img src="https://images.unsplash.com/photo-1604719312566-8912e9227c6a?auto=format&fit=crop&q=80&w=1400" alt="Inside a Laxi Super Mart store">
-        <div class="corp-hero-inner">
-            <h1>Good Products.<br><strong>Great Value.</strong></h1>
-            <p class="corp-hero-sub">India's trusted value retail chain — quality groceries, daily essentials, and household needs at everyday low prices across 85+ company-owned stores.</p>
-            <div class="corp-hero-ctas">
-                <a href="stores.html" class="btn-hero-primary">Find a Store</a>
-                <a href="about.html" class="btn-hero-outline">About Us</a>
+    <!-- =============================================
+         HERO — Fullscreen video bg (old Curat design)
+         ============================================= -->
+    <section class="hero-fullscreen">
+        <video autoplay muted loop playsinline class="hero-video-bg">
+            <source src="https://assets.mixkit.co/videos/preview/mixkit-fresh-vegetables-in-a-market-40142-large.mp4" type="video/mp4">
+        </video>
+        <div class="hero-gradient"></div>
+        <div class="hero-body">
+            <span class="hero-eyebrow"><i class="fas fa-bolt"></i> Everyday Low Prices</span>
+            <h1 class="hero-headline">Good Products.<br>Great Value.</h1>
+            <p class="hero-copy">India's trusted value retail chain — quality groceries, daily essentials, and household needs at everyday low prices across 85+ company-owned stores.</p>
+            <div class="hero-ctas">
+                <a href="stores.html" class="hero-btn-primary">Find a Store <span class="hero-btn-arrow">→</span></a>
+                <a href="about.html" class="hero-btn-ghost">About Us</a>
+            </div>
+            <div class="hero-scroll-hint">Scroll to explore <span>↓</span></div>
+        </div>
+    </section>
+
+    <main class="container">
+
+        <!-- =============================================
+             QUICK LINKS — Curat "What's New" card design
+             ============================================= -->
+        <section class="whats-new-section">
+            <h2 class="whats-new-heading">Quick Links</h2>
+            <div class="whats-new-grid" style="grid-template-columns: repeat(4, 1fr);">
+                <a href="partner.html" class="whats-new-card">
+                    <div class="whats-new-img" style="background: linear-gradient(135deg, #1a3c34, #2d6b54); display: flex; align-items: center; justify-content: center;">
+                        <i class="fas fa-boxes-stacked" style="font-size: 56px; color: rgba(255,255,255,0.2);"></i>
+                    </div>
+                    <div class="whats-new-info">
+                        <span class="whats-new-tag">Suppliers</span>
+                        <h3>New Suppliers</h3>
+                        <p>Would you like to showcase your products to us? Register as a vendor and supply to 85+ stores.</p>
+                        <span class="whats-new-link">Get started <i class="fas fa-arrow-right"></i></span>
+                    </div>
+                </a>
+                <a href="contact.html" class="whats-new-card">
+                    <div class="whats-new-img" style="background: linear-gradient(135deg, #2d6b54, #4ea585); display: flex; align-items: center; justify-content: center;">
+                        <i class="fas fa-building" style="font-size: 56px; color: rgba(255,255,255,0.2);"></i>
+                    </div>
+                    <div class="whats-new-info">
+                        <span class="whats-new-tag">Landlords</span>
+                        <h3>Property Owners</h3>
+                        <p>Do you have a commercial property to rent or sell? We're expanding to new locations across India.</p>
+                        <span class="whats-new-link">Contact us <i class="fas fa-arrow-right"></i></span>
+                    </div>
+                </a>
+                <a href="careers.html" class="whats-new-card">
+                    <div class="whats-new-img" style="background: linear-gradient(135deg, #1a3c34, #3b9b78); display: flex; align-items: center; justify-content: center;">
+                        <i class="fas fa-briefcase" style="font-size: 56px; color: rgba(255,255,255,0.2);"></i>
+                    </div>
+                    <div class="whats-new-info">
+                        <span class="whats-new-tag">Careers</span>
+                        <h3>Job Aspirants</h3>
+                        <p>Interested in joining us? Explore open positions across store operations, procurement, and more.</p>
+                        <span class="whats-new-link">View openings <i class="fas fa-arrow-right"></i></span>
+                    </div>
+                </a>
+                <a href="investors.html" class="whats-new-card">
+                    <div class="whats-new-img" style="background: linear-gradient(135deg, #0d1f1a, #1a3c34); display: flex; align-items: center; justify-content: center;">
+                        <i class="fas fa-chart-line" style="font-size: 56px; color: rgba(255,255,255,0.2);"></i>
+                    </div>
+                    <div class="whats-new-info">
+                        <span class="whats-new-tag">Investors</span>
+                        <h3>Investor Relations</h3>
+                        <p>Access financial results, annual reports, stock information, and corporate governance details.</p>
+                        <span class="whats-new-link">View reports <i class="fas fa-arrow-right"></i></span>
+                    </div>
+                </a>
+            </div>
+        </section>
+
+        <!-- =============================================
+             SPLIT STATS — Old Curat design with DMart numbers
+             ============================================= -->
+        <section class="split-stats">
+            <div class="split-stats-text">
+                <h2 class="split-stats-headline">Bringing value to millions of Indian households</h2>
+                <p class="split-stats-copy">We help families save more on everyday groceries — from staples to fresh produce — through direct sourcing, efficient operations, and our Everyday Low Cost — Everyday Low Price model.</p>
+            </div>
+            <div class="split-stats-card">
+                <div class="split-stats-card-inner">
+                    <span class="split-stats-number">85+</span>
+                    <p class="split-stats-desc">Company-owned stores across <strong>12 states</strong> serving approximately <strong>2.5 million customers</strong> every week — no franchise, no middlemen.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- =============================================
+             CSR — Curat "feature split" design
+             ============================================= -->
+        <section class="grow-section">
+            <h2 class="grow-heading">Better Schools, Brighter Futures</h2>
+        </section>
+
+        <section class="feature-splits">
+            <div class="feature-split-row">
+                <div class="feature-split-media">
+                    <img src="https://images.unsplash.com/photo-1503676260728-1c00da094a0b?auto=format&fit=crop&q=80&w=600" alt="Students in classroom">
+                </div>
+                <div class="feature-split-content">
+                    <h3 class="feature-split-title">Investing in education for underserved communities</h3>
+                    <p class="feature-split-desc">Through our CSR initiative, Laxi Super Mart renovates government school classrooms, provides learning materials, and supports teacher training programs across Rajasthan and neighboring states — building a better future for the next generation.</p>
+                    <a href="about.html" class="feature-split-link">Learn more about us <i class="fas fa-arrow-right"></i></a>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- =============================================
+         NEW STORES — Curat "insights carousel" design
+         ============================================= -->
+    <div class="container">
+        <section class="insights-section">
+            <div class="insights-header">
+                <h2 class="insights-heading">New Stores</h2>
+                <div class="insights-nav">
+                    <span class="insights-counter"><span class="insights-counter-current">1</span> / <span class="insights-counter-total">6</span></span>
+                    <button class="insights-btn insights-prev" aria-label="Previous" disabled><i class="fas fa-arrow-left"></i></button>
+                    <button class="insights-btn insights-next" aria-label="Next"><i class="fas fa-arrow-right"></i></button>
+                </div>
+            </div>
+            <div class="insights-track-wrapper">
+                <div class="insights-track" id="insights-track">
+                    <a href="stores.html" class="insight-card" style="background: linear-gradient(135deg, #1a3c34, #2d6b54);">
+                        <span class="insight-card-tag" style="background: #dff7d7; color: #1a3c34;">Now Open</span>
+                        <div class="insight-card-bottom" style="position: relative;">
+                            <span class="insight-card-eyebrow">Jaipur, Rajasthan</span>
+                            <h3 class="insight-card-title">Vaishali Nagar</h3>
+                            <div class="insight-card-stat">
+                                <span class="insight-card-stat-num" style="font-size: 64px;"><i class="fas fa-map-pin" style="font-size: 32px;"></i></span>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="stores.html" class="insight-card" style="background: linear-gradient(135deg, #2d6b54, #4ea585);">
+                        <span class="insight-card-tag" style="background: #dff7d7; color: #1a3c34;">Now Open</span>
+                        <div class="insight-card-bottom" style="position: relative;">
+                            <span class="insight-card-eyebrow">Surat, Gujarat</span>
+                            <h3 class="insight-card-title">Vesu</h3>
+                        </div>
+                    </a>
+                    <a href="stores.html" class="insight-card" style="background: linear-gradient(135deg, #1a3c34, #3b9b78);">
+                        <span class="insight-card-tag" style="background: #dff7d7; color: #1a3c34;">Now Open</span>
+                        <div class="insight-card-bottom" style="position: relative;">
+                            <span class="insight-card-eyebrow">Bangalore, Karnataka</span>
+                            <h3 class="insight-card-title">Electronic City</h3>
+                        </div>
+                    </a>
+                    <a href="stores.html" class="insight-card" style="background: linear-gradient(135deg, #0d1f1a, #1a3c34);">
+                        <span class="insight-card-tag" style="background: #fff8e1; color: #8d6e00;">Coming Soon</span>
+                        <div class="insight-card-bottom" style="position: relative;">
+                            <span class="insight-card-eyebrow">Pune, Maharashtra</span>
+                            <h3 class="insight-card-title">Hinjewadi</h3>
+                        </div>
+                    </a>
+                    <a href="stores.html" class="insight-card" style="background: linear-gradient(135deg, #1a3c34, #2d6b54);">
+                        <span class="insight-card-tag" style="background: #fff8e1; color: #8d6e00;">Coming Soon</span>
+                        <div class="insight-card-bottom" style="position: relative;">
+                            <span class="insight-card-eyebrow">Noida, Delhi NCR</span>
+                            <h3 class="insight-card-title">Sector 62</h3>
+                        </div>
+                    </a>
+                    <a href="stores.html" class="insight-card" style="background: linear-gradient(135deg, #2d6b54, #3b9b78);">
+                        <span class="insight-card-tag" style="background: #fff8e1; color: #8d6e00;">Coming Soon</span>
+                        <div class="insight-card-bottom" style="position: relative;">
+                            <span class="insight-card-eyebrow">Hyderabad, Telangana</span>
+                            <h3 class="insight-card-title">Manikonda</h3>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- =============================================
+         STORE CATEGORIES — Styled grid
+         ============================================= -->
+    <section style="background: #f8faf9; padding: 64px 0;">
+        <div class="container">
+            <h2 style="font-size: 36px; font-weight: 300; color: #1a3c34; letter-spacing: -0.4px; margin-bottom: 36px;">Store Categories</h2>
+            <div style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 14px;">
+                <div style="display: flex; align-items: center; gap: 12px; padding: 16px 20px; background: #fff; border: 1px solid #e8efe8; border-radius: 12px; font-size: 14px; font-weight: 600; color: #1a3c34; transition: all 0.2s;"><i class="fas fa-wheat-awn" style="font-size: 18px; color: #3b9b78; width: 24px; text-align: center;"></i> Grocery & Staples</div>
+                <div style="display: flex; align-items: center; gap: 12px; padding: 16px 20px; background: #fff; border: 1px solid #e8efe8; border-radius: 12px; font-size: 14px; font-weight: 600; color: #1a3c34;"><i class="fas fa-basket-shopping" style="font-size: 18px; color: #3b9b78; width: 24px; text-align: center;"></i> Daily Essentials</div>
+                <div style="display: flex; align-items: center; gap: 12px; padding: 16px 20px; background: #fff; border: 1px solid #e8efe8; border-radius: 12px; font-size: 14px; font-weight: 600; color: #1a3c34;"><i class="fas fa-snowflake" style="font-size: 18px; color: #3b9b78; width: 24px; text-align: center;"></i> Dairy & Frozen</div>
+                <div style="display: flex; align-items: center; gap: 12px; padding: 16px 20px; background: #fff; border: 1px solid #e8efe8; border-radius: 12px; font-size: 14px; font-weight: 600; color: #1a3c34;"><i class="fas fa-tag" style="font-size: 18px; color: #3b9b78; width: 24px; text-align: center;"></i> Laxi Mart Brands</div>
+                <div style="display: flex; align-items: center; gap: 12px; padding: 16px 20px; background: #fff; border: 1px solid #e8efe8; border-radius: 12px; font-size: 14px; font-weight: 600; color: #1a3c34;"><i class="fas fa-pump-soap" style="font-size: 18px; color: #3b9b78; width: 24px; text-align: center;"></i> Home & Personal Care</div>
+                <div style="display: flex; align-items: center; gap: 12px; padding: 16px 20px; background: #fff; border: 1px solid #e8efe8; border-radius: 12px; font-size: 14px; font-weight: 600; color: #1a3c34;"><i class="fas fa-bed" style="font-size: 18px; color: #3b9b78; width: 24px; text-align: center;"></i> Bed & Bath</div>
+                <div style="display: flex; align-items: center; gap: 12px; padding: 16px 20px; background: #fff; border: 1px solid #e8efe8; border-radius: 12px; font-size: 14px; font-weight: 600; color: #1a3c34;"><i class="fas fa-blender" style="font-size: 18px; color: #3b9b78; width: 24px; text-align: center;"></i> Home Appliances</div>
+                <div style="display: flex; align-items: center; gap: 12px; padding: 16px 20px; background: #fff; border: 1px solid #e8efe8; border-radius: 12px; font-size: 14px; font-weight: 600; color: #1a3c34;"><i class="fas fa-mug-hot" style="font-size: 18px; color: #3b9b78; width: 24px; text-align: center;"></i> Crockery</div>
+                <div style="display: flex; align-items: center; gap: 12px; padding: 16px 20px; background: #fff; border: 1px solid #e8efe8; border-radius: 12px; font-size: 14px; font-weight: 600; color: #1a3c34;"><i class="fas fa-shoe-prints" style="font-size: 18px; color: #3b9b78; width: 24px; text-align: center;"></i> Footwear</div>
+                <div style="display: flex; align-items: center; gap: 12px; padding: 16px 20px; background: #fff; border: 1px solid #e8efe8; border-radius: 12px; font-size: 14px; font-weight: 600; color: #1a3c34;"><i class="fas fa-suitcase-rolling" style="font-size: 18px; color: #3b9b78; width: 24px; text-align: center;"></i> Luggage</div>
+                <div style="display: flex; align-items: center; gap: 12px; padding: 16px 20px; background: #fff; border: 1px solid #e8efe8; border-radius: 12px; font-size: 14px; font-weight: 600; color: #1a3c34;"><i class="fas fa-puzzle-piece" style="font-size: 18px; color: #3b9b78; width: 24px; text-align: center;"></i> Toys & Games</div>
+                <div style="display: flex; align-items: center; gap: 12px; padding: 16px 20px; background: #fff; border: 1px solid #e8efe8; border-radius: 12px; font-size: 14px; font-weight: 600; color: #1a3c34;"><i class="fas fa-box" style="font-size: 18px; color: #3b9b78; width: 24px; text-align: center;"></i> Plastic Containers</div>
+                <div style="display: flex; align-items: center; gap: 12px; padding: 16px 20px; background: #fff; border: 1px solid #e8efe8; border-radius: 12px; font-size: 14px; font-weight: 600; color: #1a3c34;"><i class="fas fa-child" style="font-size: 18px; color: #3b9b78; width: 24px; text-align: center;"></i> Kid's Apparel</div>
+                <div style="display: flex; align-items: center; gap: 12px; padding: 16px 20px; background: #fff; border: 1px solid #e8efe8; border-radius: 12px; font-size: 14px; font-weight: 600; color: #1a3c34;"><i class="fas fa-vest" style="font-size: 18px; color: #3b9b78; width: 24px; text-align: center;"></i> Women's Apparel</div>
+                <div style="display: flex; align-items: center; gap: 12px; padding: 16px 20px; background: #fff; border: 1px solid #e8efe8; border-radius: 12px; font-size: 14px; font-weight: 600; color: #1a3c34;"><i class="fas fa-shirt" style="font-size: 18px; color: #3b9b78; width: 24px; text-align: center;"></i> Men's Apparel</div>
+                <div style="display: flex; align-items: center; gap: 12px; padding: 16px 20px; background: #fff; border: 1px solid #e8efe8; border-radius: 12px; font-size: 14px; font-weight: 600; color: #1a3c34;"><i class="fas fa-apple-whole" style="font-size: 18px; color: #3b9b78; width: 24px; text-align: center;"></i> Fruits & Vegetables</div>
             </div>
         </div>
     </section>
 
-    <main>
-        <!-- Quick Links -->
-        <section class="quick-links">
-            <h2>Quick Links</h2>
-            <div class="ql-grid">
-                <a href="partner.html" class="ql-card">
-                    <div class="ql-icon"><i class="fas fa-boxes-stacked"></i></div>
-                    <span class="ql-label">Suppliers</span>
-                    <h3>New Suppliers</h3>
-                    <p>Would you like to showcase your products to us? Register as a vendor and supply to 85+ stores.</p>
-                    <span class="ql-arrow">Get started <i class="fas fa-arrow-right"></i></span>
-                </a>
-                <a href="contact.html" class="ql-card">
-                    <div class="ql-icon"><i class="fas fa-building"></i></div>
-                    <span class="ql-label">Landlords</span>
-                    <h3>Property Owners</h3>
-                    <p>Do you have a commercial property to rent or sell? We're expanding to new locations across India.</p>
-                    <span class="ql-arrow">Contact us <i class="fas fa-arrow-right"></i></span>
-                </a>
-                <a href="careers.html" class="ql-card">
-                    <div class="ql-icon"><i class="fas fa-briefcase"></i></div>
-                    <span class="ql-label">Careers</span>
-                    <h3>Job Aspirants</h3>
-                    <p>Interested in joining us? Explore open positions across store operations, procurement, and more.</p>
-                    <span class="ql-arrow">View openings <i class="fas fa-arrow-right"></i></span>
-                </a>
-                <a href="investors.html" class="ql-card">
-                    <div class="ql-icon"><i class="fas fa-chart-line"></i></div>
-                    <span class="ql-label">Investors</span>
-                    <h3>Investor Relations</h3>
-                    <p>Access financial results, annual reports, stock information, and corporate governance details.</p>
-                    <span class="ql-arrow">View reports <i class="fas fa-arrow-right"></i></span>
-                </a>
-            </div>
-        </section>
-
-        <!-- CSR Banner -->
-        <section class="csr-banner">
-            <div class="csr-inner">
-                <div class="csr-icon-block"><i class="fas fa-graduation-cap"></i></div>
-                <div class="csr-content">
-                    <h3>Better Schools, Brighter Futures</h3>
-                    <p>Through our CSR initiative, Laxi Super Mart invests in improving government schools across Rajasthan and neighboring states — renovating classrooms, providing learning materials, and supporting teacher training programs for underserved communities.</p>
+    <!-- =============================================
+         CONTACT — Curat feature-split reversed design
+         ============================================= -->
+    <div class="container">
+        <section class="feature-splits" style="padding-top: 64px;">
+            <div class="feature-split-row reversed">
+                <div class="feature-split-media" style="background: #f0fdf0; display: flex; align-items: center; justify-content: center; padding: 48px;">
+                    <div style="text-align: center;">
+                        <i class="fas fa-headset" style="font-size: 64px; color: #3b9b78; margin-bottom: 20px; display: block;"></i>
+                        <div style="font-size: 32px; font-weight: 800; color: #1a3c34; margin-bottom: 4px;">1800-123-4567</div>
+                        <div style="font-size: 15px; color: #6a6b76;">Toll-Free, Mon-Sat 8AM-8PM</div>
+                    </div>
+                </div>
+                <div class="feature-split-content">
+                    <h3 class="feature-split-title">Contact Us</h3>
+                    <p class="feature-split-desc"><strong>Laxi Super Mart Pvt. Ltd.</strong><br>42 Tonk Road, C-Scheme, Jaipur, Rajasthan — 302001</p>
+                    <p class="feature-split-desc" style="margin-bottom: 0;"><strong>Phone:</strong> +91 141-400-1000<br><strong>Email:</strong> care@laximart.in / suggestion@laximart.in</p>
+                    <a href="contact.html" class="feature-split-cta" style="margin-top: 24px;">Get in Touch</a>
                 </div>
             </div>
         </section>
+    </div>
 
-        <!-- New Stores -->
-        <section class="new-stores">
-            <div class="new-stores-inner">
-                <h2>New Stores</h2>
-                <div class="ns-grid">
-                    <div class="ns-card">
-                        <div class="ns-pin"><i class="fas fa-map-pin"></i></div>
-                        <div>
-                            <h4>Vaishali Nagar</h4>
-                            <p>Jaipur, Rajasthan</p>
-                            <span class="ns-badge">Now Open</span>
-                        </div>
-                    </div>
-                    <div class="ns-card">
-                        <div class="ns-pin"><i class="fas fa-map-pin"></i></div>
-                        <div>
-                            <h4>Vesu</h4>
-                            <p>Surat, Gujarat</p>
-                            <span class="ns-badge">Now Open</span>
-                        </div>
-                    </div>
-                    <div class="ns-card">
-                        <div class="ns-pin"><i class="fas fa-map-pin"></i></div>
-                        <div>
-                            <h4>Electronic City</h4>
-                            <p>Bangalore, Karnataka</p>
-                            <span class="ns-badge">Now Open</span>
-                        </div>
-                    </div>
-                    <div class="ns-card">
-                        <div class="ns-pin"><i class="fas fa-map-pin"></i></div>
-                        <div>
-                            <h4>Hinjewadi</h4>
-                            <p>Pune, Maharashtra</p>
-                            <span class="ns-badge">Coming Soon</span>
-                        </div>
-                    </div>
-                    <div class="ns-card">
-                        <div class="ns-pin"><i class="fas fa-map-pin"></i></div>
-                        <div>
-                            <h4>Sector 62</h4>
-                            <p>Noida, Delhi NCR</p>
-                            <span class="ns-badge">Coming Soon</span>
-                        </div>
-                    </div>
-                    <div class="ns-card">
-                        <div class="ns-pin"><i class="fas fa-map-pin"></i></div>
-                        <div>
-                            <h4>Manikonda</h4>
-                            <p>Hyderabad, Telangana</p>
-                            <span class="ns-badge">Coming Soon</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Store Categories -->
-        <section class="store-cats">
-            <h2>Store Categories</h2>
-            <div class="sc-grid">
-                <div class="sc-item"><i class="fas fa-wheat-awn"></i> Grocery & Staples</div>
-                <div class="sc-item"><i class="fas fa-basket-shopping"></i> Daily Essentials</div>
-                <div class="sc-item"><i class="fas fa-snowflake"></i> Dairy & Frozen</div>
-                <div class="sc-item"><i class="fas fa-tag"></i> Laxi Mart Brands</div>
-                <div class="sc-item"><i class="fas fa-pump-soap"></i> Home & Personal Care</div>
-                <div class="sc-item"><i class="fas fa-bed"></i> Bed & Bath</div>
-                <div class="sc-item"><i class="fas fa-blender"></i> Home Appliances</div>
-                <div class="sc-item"><i class="fas fa-mug-hot"></i> Crockery</div>
-                <div class="sc-item"><i class="fas fa-shoe-prints"></i> Footwear</div>
-                <div class="sc-item"><i class="fas fa-suitcase-rolling"></i> Luggage</div>
-                <div class="sc-item"><i class="fas fa-puzzle-piece"></i> Toys & Games</div>
-                <div class="sc-item"><i class="fas fa-box"></i> Plastic Containers</div>
-                <div class="sc-item"><i class="fas fa-child"></i> Kid's Apparel</div>
-                <div class="sc-item"><i class="fas fa-vest"></i> Women's Apparel</div>
-                <div class="sc-item"><i class="fas fa-shirt"></i> Men's Apparel</div>
-                <div class="sc-item"><i class="fas fa-apple-whole"></i> Fruits & Vegetables</div>
-            </div>
-        </section>
-
-        <!-- Contact Strip -->
-        <section class="contact-strip">
-            <h2>Contact Us</h2>
-            <div class="cs-row">
-                <div class="cs-item">
-                    <div class="cs-item-icon"><i class="fas fa-building"></i></div>
-                    <div>
-                        <h4>Corporate Office</h4>
-                        <p>Laxi Super Mart Pvt. Ltd.<br>42 Tonk Road, C-Scheme<br>Jaipur, Rajasthan — 302001</p>
-                    </div>
-                </div>
-                <div class="cs-item">
-                    <div class="cs-item-icon"><i class="fas fa-phone"></i></div>
-                    <div>
-                        <h4>Phone</h4>
-                        <p>+91 141-400-1000<br>Toll-Free: 1800-123-4567</p>
-                    </div>
-                </div>
-                <div class="cs-item">
-                    <div class="cs-item-icon"><i class="fas fa-envelope"></i></div>
-                    <div>
-                        <h4>Email</h4>
-                        <p>care@laximart.in<br>suggestion@laximart.in</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-    </main>
-
-    <!-- Footer -->
-    <footer style="background: #1a3c34; padding-top: 48px; color: rgba(255,255,255,0.6);">
+    <!-- =============================================
+         FOOTER — Dark Curat-style
+         ============================================= -->
+    <footer style="background: #1a3c34; padding-top: 48px; color: rgba(255,255,255,0.6); margin-top: 64px;">
         <div style="max-width: 1200px; margin: 0 auto; padding: 0 20px;">
             <div style="display: flex; justify-content: space-between; flex-wrap: wrap; gap: 40px; padding-bottom: 40px; border-bottom: 1px solid rgba(255,255,255,0.1);">
                 <div style="max-width: 300px;">
@@ -646,29 +308,29 @@
                     <p style="font-size: 14px; line-height: 1.6;">Good Products, Great Value. India's trusted value retail chain with 85+ company-owned stores across 12 states.</p>
                 </div>
                 <div>
-                    <h4 style="color: #fff; font-size: 14px; font-weight: 700; margin-bottom: 16px; text-transform: uppercase; letter-spacing: 1px;">Company</h4>
+                    <h4 style="color: #fff; font-size: 13px; font-weight: 700; margin-bottom: 16px; text-transform: uppercase; letter-spacing: 1.5px;">Company</h4>
                     <ul style="list-style: none; padding: 0; display: flex; flex-direction: column; gap: 10px; font-size: 14px;">
-                        <li><a href="about.html" style="color: rgba(255,255,255,0.6); text-decoration: none; transition: color 0.2s;">About Us</a></li>
-                        <li><a href="careers.html" style="color: rgba(255,255,255,0.6); text-decoration: none; transition: color 0.2s;">Careers</a></li>
-                        <li><a href="partner.html" style="color: rgba(255,255,255,0.6); text-decoration: none; transition: color 0.2s;">Partner With Us</a></li>
-                        <li><a href="investors.html" style="color: rgba(255,255,255,0.6); text-decoration: none; transition: color 0.2s;">Investor Relations</a></li>
+                        <li><a href="about.html" style="color: rgba(255,255,255,0.55); text-decoration: none;">About Us</a></li>
+                        <li><a href="careers.html" style="color: rgba(255,255,255,0.55); text-decoration: none;">Careers</a></li>
+                        <li><a href="partner.html" style="color: rgba(255,255,255,0.55); text-decoration: none;">Partner With Us</a></li>
+                        <li><a href="investors.html" style="color: rgba(255,255,255,0.55); text-decoration: none;">Investor Relations</a></li>
                     </ul>
                 </div>
                 <div>
-                    <h4 style="color: #fff; font-size: 14px; font-weight: 700; margin-bottom: 16px; text-transform: uppercase; letter-spacing: 1px;">Legal</h4>
+                    <h4 style="color: #fff; font-size: 13px; font-weight: 700; margin-bottom: 16px; text-transform: uppercase; letter-spacing: 1.5px;">Sitemap</h4>
                     <ul style="list-style: none; padding: 0; display: flex; flex-direction: column; gap: 10px; font-size: 14px;">
-                        <li><a href="privacy.html" style="color: rgba(255,255,255,0.6); text-decoration: none;">Privacy Policy</a></li>
-                        <li><a href="terms.html" style="color: rgba(255,255,255,0.6); text-decoration: none;">Terms of Use</a></li>
-                        <li><a href="investors.html" style="color: rgba(255,255,255,0.6); text-decoration: none;">Investor Relations</a></li>
+                        <li><a href="privacy.html" style="color: rgba(255,255,255,0.55); text-decoration: none;">Privacy Policy</a></li>
+                        <li><a href="terms.html" style="color: rgba(255,255,255,0.55); text-decoration: none;">Terms of Use</a></li>
+                        <li><a href="investors.html" style="color: rgba(255,255,255,0.55); text-decoration: none;">Investor Relations</a></li>
                     </ul>
                 </div>
                 <div>
-                    <h4 style="color: #fff; font-size: 14px; font-weight: 700; margin-bottom: 16px; text-transform: uppercase; letter-spacing: 1px;">Connect</h4>
+                    <h4 style="color: #fff; font-size: 13px; font-weight: 700; margin-bottom: 16px; text-transform: uppercase; letter-spacing: 1.5px;">Connect</h4>
                     <ul style="list-style: none; padding: 0; display: flex; flex-direction: column; gap: 10px; font-size: 14px;">
-                        <li><a href="contact.html" style="color: rgba(255,255,255,0.6); text-decoration: none;">Contact Us</a></li>
-                        <li><a href="stores.html" style="color: rgba(255,255,255,0.6); text-decoration: none;">Store Locator</a></li>
-                        <li style="color: rgba(255,255,255,0.5);">care@laximart.in</li>
-                        <li style="color: rgba(255,255,255,0.5);">1800-123-4567</li>
+                        <li><a href="contact.html" style="color: rgba(255,255,255,0.55); text-decoration: none;">Contact Us</a></li>
+                        <li><a href="stores.html" style="color: rgba(255,255,255,0.55); text-decoration: none;">Store Locator</a></li>
+                        <li style="color: rgba(255,255,255,0.4);">care@laximart.in</li>
+                        <li style="color: rgba(255,255,255,0.4);">1800-123-4567</li>
                     </ul>
                 </div>
             </div>
@@ -676,10 +338,10 @@
         <div style="max-width: 1200px; margin: 0 auto; padding: 20px 20px; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 12px; font-size: 13px;">
             <span>&copy; 2026 Laxi Super Mart Pvt. Ltd. All rights reserved.</span>
             <div style="display: flex; gap: 16px;">
-                <a href="#" aria-label="Facebook" style="color: rgba(255,255,255,0.5); font-size: 18px;"><i class="fab fa-facebook-f"></i></a>
-                <a href="#" aria-label="X" style="color: rgba(255,255,255,0.5); font-size: 18px;"><i class="fab fa-x-twitter"></i></a>
-                <a href="#" aria-label="Instagram" style="color: rgba(255,255,255,0.5); font-size: 18px;"><i class="fab fa-instagram"></i></a>
-                <a href="#" aria-label="YouTube" style="color: rgba(255,255,255,0.5); font-size: 18px;"><i class="fab fa-youtube"></i></a>
+                <a href="#" aria-label="Facebook" style="color: rgba(255,255,255,0.4); font-size: 18px;"><i class="fab fa-facebook-f"></i></a>
+                <a href="#" aria-label="X" style="color: rgba(255,255,255,0.4); font-size: 18px;"><i class="fab fa-x-twitter"></i></a>
+                <a href="#" aria-label="Instagram" style="color: rgba(255,255,255,0.4); font-size: 18px;"><i class="fab fa-instagram"></i></a>
+                <a href="#" aria-label="YouTube" style="color: rgba(255,255,255,0.4); font-size: 18px;"><i class="fab fa-youtube"></i></a>
             </div>
         </div>
     </footer>
