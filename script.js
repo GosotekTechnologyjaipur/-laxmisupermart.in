@@ -264,9 +264,9 @@ function setupCategoryBrowse() {
     });
 }
 
-// Category Browse Click (Product Page inline onclick)
+// Category Browse (no longer used — product page removed)
 function filterByCategory(cat) {
-    window.location.href = `product.html?category=${encodeURIComponent(cat)}`;
+    // no-op
 }
 
 // ========================================
