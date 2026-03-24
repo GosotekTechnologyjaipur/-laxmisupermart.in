@@ -96,53 +96,213 @@
     <main class="container">
 
         <!-- =============================================
-             QUICK LINKS — Curat "What's New" card design
+             QUICK LINKS — Pinterest-style tall cards
              ============================================= -->
-        <section class="whats-new-section">
-            <h2 class="whats-new-heading">Quick Links</h2>
-            <div class="whats-new-grid" style="grid-template-columns: repeat(4, 1fr);">
-                <a href="suppliers.html" class="whats-new-card">
-                    <div class="whats-new-img" style="background: linear-gradient(135deg, #1a3c34, #2d6b54); display: flex; align-items: center; justify-content: center;">
-                        <i class="fas fa-boxes-stacked" style="font-size: 56px; color: rgba(255,255,255,0.2);"></i>
+        <style>
+            .ql-section { padding: 80px 0 64px; }
+            .ql-section > h2 {
+                font-size: 36px;
+                font-weight: 300;
+                color: #1a3c34;
+                letter-spacing: -0.4px;
+                margin-bottom: 40px;
+            }
+            .ql-pins {
+                display: grid;
+                grid-template-columns: repeat(4, 1fr);
+                gap: 20px;
+            }
+            .ql-pin {
+                text-decoration: none;
+                color: inherit;
+                display: flex;
+                flex-direction: column;
+                transition: transform 0.3s;
+            }
+            .ql-pin:hover { transform: translateY(-6px); }
+
+            /* Tall image card — Pinterest style */
+            .ql-pin-img {
+                position: relative;
+                border-radius: 24px;
+                overflow: hidden;
+                aspect-ratio: 3/4;
+                margin-bottom: 16px;
+            }
+            .ql-pin-img img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                display: block;
+                transition: transform 0.4s;
+            }
+            .ql-pin:hover .ql-pin-img img { transform: scale(1.05); }
+
+            /* Gradient overlay bottom */
+            .ql-pin-img::after {
+                content: '';
+                position: absolute;
+                inset: 0;
+                background: linear-gradient(transparent 50%, rgba(26,60,52,0.7) 100%);
+                pointer-events: none;
+                border-radius: 24px;
+            }
+
+            /* Badge on image */
+            .ql-pin-badge {
+                position: absolute;
+                top: 14px;
+                left: 14px;
+                z-index: 2;
+                background: rgba(255,255,255,0.92);
+                backdrop-filter: blur(8px);
+                color: #1a3c34;
+                padding: 6px 14px;
+                border-radius: 20px;
+                font-size: 12px;
+                font-weight: 700;
+                text-transform: uppercase;
+                letter-spacing: 0.5px;
+                display: flex;
+                align-items: center;
+                gap: 6px;
+            }
+            .ql-pin-badge i { color: #3b9b78; }
+
+            /* Icon overlay on image */
+            .ql-pin-icon {
+                position: absolute;
+                bottom: 16px;
+                right: 16px;
+                z-index: 2;
+                width: 48px;
+                height: 48px;
+                background: rgba(255,255,255,0.15);
+                backdrop-filter: blur(12px);
+                border: 1px solid rgba(255,255,255,0.2);
+                border-radius: 14px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                font-size: 20px;
+                color: #fff;
+            }
+
+            /* Text below card */
+            .ql-pin-text {
+                padding: 0 4px;
+            }
+            .ql-pin-label {
+                font-size: 11px;
+                font-weight: 700;
+                text-transform: uppercase;
+                letter-spacing: 1.5px;
+                color: #3b9b78;
+                margin-bottom: 6px;
+                display: block;
+            }
+            .ql-pin-text h3 {
+                font-size: 19px;
+                font-weight: 700;
+                color: #222;
+                margin-bottom: 8px;
+                line-height: 1.25;
+            }
+            .ql-pin-text p {
+                font-size: 14px;
+                color: #6a6b76;
+                line-height: 1.55;
+                margin-bottom: 12px;
+            }
+            .ql-pin-cta {
+                font-size: 14px;
+                font-weight: 600;
+                color: #3b9b78;
+                display: inline-flex;
+                align-items: center;
+                gap: 6px;
+            }
+            .ql-pin-cta i { transition: transform 0.2s; font-size: 12px; }
+            .ql-pin:hover .ql-pin-cta i { transform: translateX(4px); }
+
+            /* Staggered heights for Pinterest feel */
+            .ql-pins .ql-pin:nth-child(2) { margin-top: 32px; }
+            .ql-pins .ql-pin:nth-child(4) { margin-top: 48px; }
+
+            @media (max-width: 1024px) {
+                .ql-pins { grid-template-columns: repeat(2, 1fr); gap: 20px; }
+                .ql-pins .ql-pin:nth-child(2),
+                .ql-pins .ql-pin:nth-child(4) { margin-top: 0; }
+            }
+            @media (max-width: 600px) {
+                .ql-pins { grid-template-columns: 1fr 1fr; gap: 14px; }
+                .ql-pin-img { border-radius: 18px; }
+                .ql-pin-text h3 { font-size: 16px; }
+                .ql-pin-text p { font-size: 13px; }
+                .ql-section > h2 { font-size: 28px; }
+            }
+        </style>
+
+        <section class="ql-section">
+            <h2>Quick Links</h2>
+            <div class="ql-pins">
+                <!-- Suppliers -->
+                <a href="suppliers.html" class="ql-pin">
+                    <div class="ql-pin-img">
+                        <img src="https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?auto=format&fit=crop&q=80&w=400" alt="Warehouse supplier">
+                        <span class="ql-pin-badge"><i class="fas fa-boxes-stacked"></i> Suppliers</span>
+                        <div class="ql-pin-icon"><i class="fas fa-arrow-right"></i></div>
                     </div>
-                    <div class="whats-new-info">
-                        <span class="whats-new-tag">Suppliers</span>
+                    <div class="ql-pin-text">
+                        <span class="ql-pin-label">Suppliers</span>
                         <h3>New Suppliers</h3>
                         <p>Would you like to showcase your products to us? Register as a vendor and supply to 85+ stores.</p>
-                        <span class="whats-new-link">Get started <i class="fas fa-arrow-right"></i></span>
+                        <span class="ql-pin-cta">Get started <i class="fas fa-arrow-right"></i></span>
                     </div>
                 </a>
-                <a href="landlords.html" class="whats-new-card">
-                    <div class="whats-new-img" style="background: linear-gradient(135deg, #2d6b54, #4ea585); display: flex; align-items: center; justify-content: center;">
-                        <i class="fas fa-building" style="font-size: 56px; color: rgba(255,255,255,0.2);"></i>
+
+                <!-- Landlords -->
+                <a href="landlords.html" class="ql-pin">
+                    <div class="ql-pin-img">
+                        <img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&q=80&w=400" alt="Commercial building">
+                        <span class="ql-pin-badge"><i class="fas fa-building"></i> Landlords</span>
+                        <div class="ql-pin-icon"><i class="fas fa-arrow-right"></i></div>
                     </div>
-                    <div class="whats-new-info">
-                        <span class="whats-new-tag">Landlords</span>
+                    <div class="ql-pin-text">
+                        <span class="ql-pin-label">Landlords</span>
                         <h3>Property Owners</h3>
                         <p>Do you have a commercial property to rent or sell? We're expanding to new locations across India.</p>
-                        <span class="whats-new-link">Contact us <i class="fas fa-arrow-right"></i></span>
+                        <span class="ql-pin-cta">Contact us <i class="fas fa-arrow-right"></i></span>
                     </div>
                 </a>
-                <a href="careers.html" class="whats-new-card">
-                    <div class="whats-new-img" style="background: linear-gradient(135deg, #1a3c34, #3b9b78); display: flex; align-items: center; justify-content: center;">
-                        <i class="fas fa-briefcase" style="font-size: 56px; color: rgba(255,255,255,0.2);"></i>
+
+                <!-- Careers -->
+                <a href="careers.html" class="ql-pin">
+                    <div class="ql-pin-img">
+                        <img src="https://images.unsplash.com/photo-1521737711867-e3b97375f902?auto=format&fit=crop&q=80&w=400" alt="Team at work">
+                        <span class="ql-pin-badge"><i class="fas fa-briefcase"></i> Careers</span>
+                        <div class="ql-pin-icon"><i class="fas fa-arrow-right"></i></div>
                     </div>
-                    <div class="whats-new-info">
-                        <span class="whats-new-tag">Careers</span>
+                    <div class="ql-pin-text">
+                        <span class="ql-pin-label">Careers</span>
                         <h3>Job Aspirants</h3>
                         <p>Interested in joining us? Explore open positions across store operations, procurement, and more.</p>
-                        <span class="whats-new-link">View openings <i class="fas fa-arrow-right"></i></span>
+                        <span class="ql-pin-cta">View openings <i class="fas fa-arrow-right"></i></span>
                     </div>
                 </a>
-                <a href="investors.html" class="whats-new-card">
-                    <div class="whats-new-img" style="background: linear-gradient(135deg, #0d1f1a, #1a3c34); display: flex; align-items: center; justify-content: center;">
-                        <i class="fas fa-chart-line" style="font-size: 56px; color: rgba(255,255,255,0.2);"></i>
+
+                <!-- Investors -->
+                <a href="investors.html" class="ql-pin">
+                    <div class="ql-pin-img">
+                        <img src="https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?auto=format&fit=crop&q=80&w=400" alt="Financial charts">
+                        <span class="ql-pin-badge"><i class="fas fa-chart-line"></i> Investors</span>
+                        <div class="ql-pin-icon"><i class="fas fa-arrow-right"></i></div>
                     </div>
-                    <div class="whats-new-info">
-                        <span class="whats-new-tag">Investors</span>
+                    <div class="ql-pin-text">
+                        <span class="ql-pin-label">Investors</span>
                         <h3>Investor Relations</h3>
                         <p>Access financial results, annual reports, stock information, and corporate governance details.</p>
-                        <span class="whats-new-link">View reports <i class="fas fa-arrow-right"></i></span>
+                        <span class="ql-pin-cta">View reports <i class="fas fa-arrow-right"></i></span>
                     </div>
                 </a>
             </div>
