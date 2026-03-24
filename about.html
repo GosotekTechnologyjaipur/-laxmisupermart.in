@@ -3,444 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About Us - Laxi Super Mart</title>
+    <title>About Us — Laxi Super Mart</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="pages.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <style>
-        /* ========================================
-           ABOUT PAGE — Refined Styles
-           ======================================== */
-
-        /* Hero Banner with Image */
-        .about-hero {
-            position: relative;
-            height: 420px;
-            overflow: hidden;
-            display: flex;
-            align-items: flex-end;
-        }
-        .about-hero img {
-            position: absolute;
-            inset: 0;
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            z-index: 1;
-        }
-        .about-hero::after {
-            content: '';
-            position: absolute;
-            inset: 0;
-            z-index: 2;
-            background: linear-gradient(to top, rgba(26,60,52,0.95) 0%, rgba(26,60,52,0.6) 50%, rgba(26,60,52,0.3) 100%);
-        }
-        .about-hero-inner {
-            position: relative;
-            z-index: 3;
-            max-width: 1200px;
-            width: 100%;
-            margin: 0 auto;
-            padding: 0 20px 56px;
-        }
-        .about-hero .breadcrumb { justify-content: flex-start; margin-bottom: 16px; }
-        .about-hero h1 {
-            font-size: 56px;
-            font-weight: 300;
-            letter-spacing: -1px;
-            line-height: 1.08;
-            color: #fff;
-            margin-bottom: 12px;
-        }
-        .about-hero h1 strong { font-weight: 800; }
-        .about-hero-tagline {
-            font-size: 20px;
-            color: rgba(255,255,255,0.75);
-            max-width: 520px;
-        }
-
-        /* Mission & Vision Strip */
-        .mv-strip {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            border-bottom: 1px solid #d4ddd8;
-        }
-        .mv-item {
-            padding: 56px 48px;
-            display: flex;
-            flex-direction: column;
-            gap: 12px;
-        }
-        .mv-item:first-child { border-right: 1px solid #d4ddd8; }
-        .mv-label {
-            font-size: 12px;
-            font-weight: 700;
-            text-transform: uppercase;
-            letter-spacing: 2px;
-            color: #3b9b78;
-        }
-        .mv-text {
-            font-size: 28px;
-            font-weight: 300;
-            line-height: 1.3;
-            color: #1a3c34;
-            letter-spacing: -0.3px;
-        }
-
-        /* Story Section */
-        .about-story {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 80px 20px;
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 56px;
-            align-items: center;
-        }
-        .story-content h2 {
-            font-size: 14px;
-            font-weight: 700;
-            text-transform: uppercase;
-            letter-spacing: 2px;
-            color: #3b9b78;
-            margin-bottom: 20px;
-        }
-        .story-content h3 {
-            font-size: 36px;
-            font-weight: 300;
-            color: #1a3c34;
-            line-height: 1.2;
-            letter-spacing: -0.4px;
-            margin-bottom: 24px;
-        }
-        .story-content p {
-            font-size: 16px;
-            color: #6a6b76;
-            line-height: 1.75;
-            margin-bottom: 16px;
-        }
-        .story-pullquote {
-            border-left: 3px solid #3b9b78;
-            padding-left: 20px;
-            font-size: 18px;
-            font-weight: 500;
-            font-style: italic;
-            color: #1a3c34;
-            line-height: 1.5;
-            margin: 28px 0;
-        }
-        .story-image {
-            border-radius: 24px;
-            overflow: hidden;
-            position: relative;
-        }
-        .story-image img {
-            width: 100%;
-            height: 480px;
-            object-fit: cover;
-            display: block;
-        }
-        .story-image-badge {
-            position: absolute;
-            bottom: 20px;
-            left: 20px;
-            background: rgba(26,60,52,0.85);
-            backdrop-filter: blur(12px);
-            color: #fff;
-            padding: 14px 22px;
-            border-radius: 14px;
-            font-size: 14px;
-            font-weight: 600;
-        }
-        .story-image-badge span {
-            display: block;
-            font-size: 28px;
-            font-weight: 800;
-            line-height: 1;
-            margin-bottom: 2px;
-        }
-
-        /* Stats Bar */
-        .stats-bar {
-            background: #1a3c34;
-            padding: 56px 20px;
-        }
-        .stats-bar-inner {
-            max-width: 1200px;
-            margin: 0 auto;
-            display: flex;
-            justify-content: space-between;
-            flex-wrap: wrap;
-            gap: 32px;
-        }
-        .stat-block { text-align: center; flex: 1; min-width: 140px; }
-        .stat-block-num {
-            font-size: 48px;
-            font-weight: 800;
-            color: #3b9b78;
-            line-height: 1;
-            margin-bottom: 6px;
-            display: block;
-        }
-        .stat-block-label {
-            font-size: 14px;
-            color: rgba(255,255,255,0.6);
-            font-weight: 500;
-        }
-
-        /* Values */
-        .values-section {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 80px 20px;
-        }
-        .values-header { text-align: center; margin-bottom: 48px; }
-        .values-header h2 {
-            font-size: 40px;
-            font-weight: 300;
-            color: #1a3c34;
-            letter-spacing: -0.4px;
-            margin-bottom: 12px;
-        }
-        .values-header p { font-size: 16px; color: #6a6b76; }
-        .values-grid {
-            display: grid;
-            grid-template-columns: repeat(4, 1fr);
-            gap: 20px;
-        }
-        .value-card {
-            background: #f9fbf9;
-            border: 1px solid #e8efe8;
-            border-radius: 20px;
-            padding: 32px 24px;
-            text-align: center;
-            transition: all 0.3s;
-        }
-        .value-card:hover {
-            background: #fff;
-            border-color: #3b9b78;
-            box-shadow: 0 12px 32px rgba(59,155,120,0.08);
-            transform: translateY(-4px);
-        }
-        .value-icon {
-            width: 60px;
-            height: 60px;
-            border-radius: 16px;
-            background: #dff7d7;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin: 0 auto 18px;
-            font-size: 24px;
-            color: #3b9b78;
-        }
-        .value-card h3 {
-            font-size: 18px;
-            font-weight: 700;
-            color: #222;
-            margin-bottom: 8px;
-        }
-        .value-card p {
-            font-size: 14px;
-            color: #6a6b76;
-            line-height: 1.6;
-        }
-
-        /* Timeline */
-        .journey-section {
-            background: #f8faf9;
-            padding: 80px 20px;
-        }
-        .journey-inner {
-            max-width: 1200px;
-            margin: 0 auto;
-        }
-        .journey-inner > h2 {
-            font-size: 40px;
-            font-weight: 300;
-            color: #1a3c34;
-            letter-spacing: -0.4px;
-            margin-bottom: 48px;
-        }
-        .journey-grid {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 20px;
-        }
-        .journey-card {
-            background: #fff;
-            border: 1px solid #e8efe8;
-            border-radius: 16px;
-            padding: 28px;
-            transition: all 0.3s;
-            position: relative;
-            overflow: hidden;
-        }
-        .journey-card:hover {
-            border-color: #3b9b78;
-            box-shadow: 0 8px 24px rgba(59,155,120,0.06);
-        }
-        .journey-card::before {
-            content: '';
-            position: absolute;
-            top: 0; left: 0;
-            width: 4px;
-            height: 100%;
-            background: #3b9b78;
-            opacity: 0;
-            transition: opacity 0.3s;
-        }
-        .journey-card:hover::before { opacity: 1; }
-        .journey-year {
-            font-size: 32px;
-            font-weight: 800;
-            color: #3b9b78;
-            line-height: 1;
-            margin-bottom: 10px;
-        }
-        .journey-card h4 {
-            font-size: 16px;
-            font-weight: 700;
-            color: #222;
-            margin-bottom: 6px;
-        }
-        .journey-card p {
-            font-size: 14px;
-            color: #6a6b76;
-            line-height: 1.5;
-        }
-
-        /* Leadership */
-        .leadership-section {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 80px 20px;
-        }
-        .leadership-header { text-align: center; margin-bottom: 48px; }
-        .leadership-header h2 {
-            font-size: 40px;
-            font-weight: 300;
-            color: #1a3c34;
-            letter-spacing: -0.4px;
-            margin-bottom: 12px;
-        }
-        .leadership-header p { font-size: 16px; color: #6a6b76; }
-        .leader-grid {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 24px;
-        }
-        .leader-card {
-            border-radius: 20px;
-            overflow: hidden;
-            border: 1px solid #e8efe8;
-            background: #fff;
-            transition: all 0.3s;
-        }
-        .leader-card:hover {
-            box-shadow: 0 12px 32px rgba(26,60,52,0.08);
-            transform: translateY(-4px);
-        }
-        .leader-photo {
-            width: 100%;
-            height: 280px;
-            object-fit: cover;
-            display: block;
-            background: linear-gradient(135deg, #dff7d7, #b5e6cc);
-        }
-        .leader-info {
-            padding: 24px;
-        }
-        .leader-info h3 {
-            font-size: 20px;
-            font-weight: 700;
-            color: #222;
-            margin-bottom: 4px;
-        }
-        .leader-role {
-            font-size: 14px;
-            font-weight: 600;
-            color: #3b9b78;
-            margin-bottom: 12px;
-            display: block;
-        }
-        .leader-info p {
-            font-size: 14px;
-            color: #6a6b76;
-            line-height: 1.6;
-        }
-
-        /* CTA Banner */
-        .about-cta {
-            background: linear-gradient(135deg, #1a3c34, #2d6b54);
-            padding: 72px 20px;
-            text-align: center;
-            color: #fff;
-        }
-        .about-cta h2 {
-            font-size: 40px;
-            font-weight: 300;
-            letter-spacing: -0.4px;
-            margin-bottom: 16px;
-        }
-        .about-cta p {
-            font-size: 17px;
-            color: rgba(255,255,255,0.65);
-            max-width: 480px;
-            margin: 0 auto 32px;
-            line-height: 1.6;
-        }
-        .about-cta-btns {
-            display: flex;
-            justify-content: center;
-            gap: 16px;
-            flex-wrap: wrap;
-        }
-        .about-cta-btns a {
-            padding: 14px 36px;
-            border-radius: 100px;
-            font-size: 15px;
-            font-weight: 600;
-            text-decoration: none;
-            transition: all 0.25s;
-        }
-        .cta-btn-white {
-            background: #fff;
-            color: #1a3c34;
-            border: 2px solid #fff;
-        }
-        .cta-btn-white:hover { background: transparent; color: #fff; }
-        .cta-btn-ghost {
-            background: transparent;
-            color: #fff;
-            border: 1px solid rgba(255,255,255,0.35);
-        }
-        .cta-btn-ghost:hover { border-color: rgba(255,255,255,0.7); background: rgba(255,255,255,0.08); }
-
-        /* Responsive */
-        @media (max-width: 1024px) {
-            .values-grid { grid-template-columns: repeat(2, 1fr); }
-            .journey-grid { grid-template-columns: repeat(2, 1fr); }
-        }
-        @media (max-width: 768px) {
-            .about-hero { height: 340px; }
-            .about-hero h1 { font-size: 36px; }
-            .mv-strip { grid-template-columns: 1fr; }
-            .mv-item:first-child { border-right: none; border-bottom: 1px solid #d4ddd8; }
-            .mv-text { font-size: 22px; }
-            .about-story { grid-template-columns: 1fr; gap: 32px; padding: 48px 20px; }
-            .story-image img { height: 300px; }
-            .stat-block-num { font-size: 36px; }
-            .values-grid, .journey-grid, .leader-grid { grid-template-columns: 1fr; }
-            .values-section, .leadership-section { padding: 48px 20px; }
-            .journey-section { padding: 48px 20px; }
-            .about-cta h2 { font-size: 28px; }
-            .leader-photo { height: 220px; }
-        }
-    </style>
 </head>
 <body>
     <!-- Mobile Drawer -->
@@ -460,24 +29,19 @@
             <a href="contact.html" class="drawer-link">Contact Us</a>
         </nav>
         <div style="margin-top: auto; padding-top: 20px; border-top: 1px solid rgba(255,255,255,0.1);">
-            <p style="font-size: 13px; color: rgba(255,255,255,0.5); margin-bottom: 8px;">Contact Us</p>
-            <p style="font-weight: 700; color: var(--primary-green);">+91 98765 43210</p>
+            <p style="font-size: 13px; color: rgba(255,255,255,0.5); margin-bottom: 8px;">Toll-Free</p>
+            <p style="font-weight: 700; color: var(--primary-green);">1800-123-4567</p>
         </div>
     </div>
 
-    <!-- Top Announcement Bar -->
-    <div class="announcement-bar">
-        Special Offers and Free Delivery for Orders Over ₹499!
-    </div>
+    <!-- Announcement Bar -->
+    <div class="announcement-bar">Good Products, Great Value — Everyday Low Prices at 85+ Stores Across India</div>
 
-    <!-- Header & Navigation -->
+    <!-- Header -->
     <header class="header-nav">
         <div class="nav-inner">
             <button class="mobile-menu-btn" id="open-drawer"><i class="fas fa-bars"></i></button>
-            <a href="index.html" class="nav-logo">
-                <i class="fas fa-leaf"></i>
-                <span>Laxi <strong>Mart</strong></span>
-            </a>
+            <a href="index.html" class="nav-logo"><i class="fas fa-leaf"></i><span>Laxi <strong>Mart</strong></span></a>
             <nav class="nav-links">
                 <a href="index.html" class="nav-link">Home</a>
                 <a href="about.html" class="nav-link">About Us</a>
@@ -487,256 +51,349 @@
             <div class="nav-right">
                 <button class="nav-search-toggle" aria-label="Search"><i class="fas fa-search"></i></button>
                 <a href="#" class="nav-icon" title="Favorites"><i class="far fa-heart"></i></a>
-                <a href="#" class="nav-icon nav-cart" title="Cart">
-                    <i class="fas fa-shopping-bag"></i>
-                    <span class="cart-badge">0</span>
-                </a>
+                <a href="#" class="nav-icon nav-cart" title="Cart"><i class="fas fa-shopping-bag"></i><span class="cart-badge">0</span></a>
             </div>
         </div>
         <div class="nav-search-bar" id="nav-search-bar">
             <div class="nav-search-inner">
                 <i class="fas fa-search"></i>
-                <input type="text" placeholder="Search for products, categories, brands...">
-                <button class="nav-search-close" aria-label="Close search"><i class="fas fa-times"></i></button>
+                <input type="text" placeholder="Search...">
+                <button class="nav-search-close" aria-label="Close"><i class="fas fa-times"></i></button>
             </div>
         </div>
     </header>
 
-    <!-- Hero Banner with Background Image -->
-    <section class="about-hero">
-        <img src="https://images.unsplash.com/photo-1604719312566-8912e9227c6a?auto=format&fit=crop&q=80&w=1400" alt="Inside a Laxi Super Mart store">
-        <div class="about-hero-inner">
-            <div class="breadcrumb">
-                <a href="index.html">Home</a>
-                <span class="sep">/</span>
-                <span class="current">About Us</span>
+    <!-- =============================================
+         HERO — Fullscreen video (same as landing page)
+         ============================================= -->
+    <section class="hero-fullscreen" style="max-height: 520px; min-height: 420px;">
+        <video autoplay muted loop playsinline class="hero-video-bg">
+            <source src="https://assets.mixkit.co/videos/preview/mixkit-woman-picking-fruits-in-supermarket-32889-large.mp4" type="video/mp4">
+        </video>
+        <div class="hero-gradient"></div>
+        <div class="hero-body">
+            <span class="hero-eyebrow"><i class="fas fa-leaf"></i> Since 2009</span>
+            <h1 class="hero-headline">Good Products.<br>Great Value.</h1>
+            <p class="hero-copy">India's trusted value retail chain — founded in Jaipur with a simple promise: quality groceries at the lowest possible prices, every day.</p>
+            <div class="hero-ctas">
+                <a href="stores.html" class="hero-btn-primary">Find a Store <span class="hero-btn-arrow">→</span></a>
+                <a href="investors.html" class="hero-btn-ghost">Investor Relations</a>
             </div>
-            <h1>Good Products.<br><strong>Great Value.</strong></h1>
-            <p class="about-hero-tagline">India's trusted value retail chain since 2009 — quality groceries, daily essentials, and honest prices across 85+ company-owned stores.</p>
         </div>
     </section>
 
-    <!-- Mission & Vision Strip -->
-    <section class="mv-strip">
-        <div class="mv-item">
-            <span class="mv-label">Our Mission</span>
-            <p class="mv-text">To offer every Indian family access to quality products at the lowest possible prices — every day, not just during sales.</p>
-        </div>
-        <div class="mv-item">
-            <span class="mv-label">Our Vision</span>
-            <p class="mv-text">To be the most trusted and preferred value retailer in India, expanding our reach while never compromising on price or quality.</p>
-        </div>
-    </section>
-
-    <main>
-        <!-- Our Story -->
-        <section class="about-story">
-            <div class="story-content">
-                <h2>Our Story</h2>
-                <h3>From a single store in Jaipur to 85+ stores across India</h3>
-                <p>Laxi Super Mart was founded in 2009 in Jaipur, Rajasthan with a simple belief — every Indian family deserves access to quality products at fair prices. Starting as a single 5,000 sq ft store in C-Scheme, we focused on what matters most: keeping costs low and passing every saving to our customers.</p>
-                <div class="story-pullquote">
-                    "No gimmicks, no inflated MRPs — just honest prices, every single day. That's the promise we started with, and that's the promise we keep."
+    <!-- =============================================
+         MISSION & VISION — Feature split design
+         ============================================= -->
+    <main class="container">
+        <section class="feature-splits" style="padding-top: 80px;">
+            <div class="feature-split-row">
+                <div class="feature-split-media" style="background: #dff7d7; display: flex; align-items: center; justify-content: center; padding: 56px;">
+                    <div style="text-align: center;">
+                        <i class="fas fa-bullseye" style="font-size: 48px; color: #3b9b78; margin-bottom: 16px; display: block;"></i>
+                        <div style="font-size: 12px; font-weight: 700; text-transform: uppercase; letter-spacing: 2px; color: #3b9b78; margin-bottom: 12px;">Our Mission</div>
+                        <div style="font-size: 24px; font-weight: 300; color: #1a3c34; line-height: 1.35; max-width: 380px;">To offer every Indian family access to quality products at the lowest possible prices — every day, not just during sales.</div>
+                    </div>
                 </div>
-                <p>Unlike traditional retail, we own all our stores, work directly with manufacturers, and operate on an Everyday Low Cost — Everyday Low Price (EDLC-EDLP) model. We don't offer franchises. Every store is company-owned and company-operated, ensuring consistent quality and pricing across all locations.</p>
-            </div>
-            <div class="story-image">
-                <img src="https://images.unsplash.com/photo-1542838132-92c53300491e?auto=format&fit=crop&q=80&w=600" alt="Fresh produce at Laxi Mart">
-                <div class="story-image-badge">
-                    <span>Since 2009</span>
-                    Jaipur, Rajasthan
+                <div class="feature-split-content">
+                    <div style="font-size: 12px; font-weight: 700; text-transform: uppercase; letter-spacing: 2px; color: #3b9b78; margin-bottom: 12px;">Our Vision</div>
+                    <h3 class="feature-split-title">To be India's most trusted value retailer</h3>
+                    <p class="feature-split-desc">We aim to expand our reach to every major city in India while never compromising on price or quality. Every store is company-owned and company-operated — no franchise, no middlemen — ensuring the same honest pricing everywhere.</p>
+                    <a href="stores.html" class="feature-split-link">See our 85+ stores <i class="fas fa-arrow-right"></i></a>
                 </div>
             </div>
         </section>
 
-        <!-- Stats Bar -->
-        <section class="stats-bar">
-            <div class="stats-bar-inner">
-                <div class="stat-block">
-                    <span class="stat-block-num">85+</span>
-                    <span class="stat-block-label">Company-Owned Stores</span>
-                </div>
-                <div class="stat-block">
-                    <span class="stat-block-num">12</span>
-                    <span class="stat-block-label">States & UTs</span>
-                </div>
-                <div class="stat-block">
-                    <span class="stat-block-num">5,000+</span>
-                    <span class="stat-block-label">Team Members</span>
-                </div>
-                <div class="stat-block">
-                    <span class="stat-block-num">15+</span>
-                    <span class="stat-block-label">Years of Trust</span>
-                </div>
-                <div class="stat-block">
-                    <span class="stat-block-num">2.5M+</span>
-                    <span class="stat-block-label">Monthly Customers</span>
+        <!-- =============================================
+             OUR STORY — Split Stats design
+             ============================================= -->
+        <section class="split-stats" style="padding-top: 80px;">
+            <div class="split-stats-text">
+                <h2 class="split-stats-headline">From a single store in Jaipur to 85+ stores across India</h2>
+                <p class="split-stats-copy">Laxi Super Mart was founded in 2009 with a simple belief — every Indian family deserves quality products at fair prices. Starting as a single 5,000 sq ft store in C-Scheme, Jaipur, we focused on what matters most: keeping costs low and passing every saving to our customers.</p>
+                <p class="split-stats-copy" style="margin-top: 16px;">Unlike traditional retail, we own all our stores, work directly with manufacturers, and operate on an Everyday Low Cost — Everyday Low Price (EDLC-EDLP) model. No gimmicks, no inflated MRPs — just honest prices, every single day.</p>
+            </div>
+            <div class="split-stats-card">
+                <div class="split-stats-card-inner">
+                    <span class="split-stats-number">2009</span>
+                    <p class="split-stats-desc">Founded in <strong>Jaipur, Rajasthan</strong> — a 5,000 sq ft neighbourhood store built on the promise of everyday low prices for Indian families.</p>
                 </div>
             </div>
         </section>
 
-        <!-- Our Values -->
-        <section class="values-section">
-            <div class="values-header">
-                <h2>What we stand for</h2>
-                <p>The principles that guide every decision — from sourcing to shelf.</p>
-            </div>
-            <div class="values-grid">
-                <div class="value-card">
-                    <div class="value-icon"><i class="fas fa-medal"></i></div>
-                    <h3>Quality First</h3>
-                    <p>Every product passes strict quality checks. We partner directly with trusted brands and verified suppliers to ensure freshness and authenticity.</p>
-                </div>
-                <div class="value-card">
-                    <div class="value-icon"><i class="fas fa-tags"></i></div>
-                    <h3>Everyday Low Prices</h3>
-                    <p>No fake discounts or inflated MRPs. Our EDLC-EDLP model means you get the lowest possible price every day — not just during sales.</p>
-                </div>
-                <div class="value-card">
-                    <div class="value-icon"><i class="fas fa-seedling"></i></div>
-                    <h3>Local Sourcing</h3>
-                    <p>We source fresh produce from local farmers and regional suppliers, reducing transit time and supporting agriculture across India.</p>
-                </div>
-                <div class="value-card">
-                    <div class="value-icon"><i class="fas fa-hands-helping"></i></div>
-                    <h3>Community First</h3>
-                    <p>Each store creates 50-60 local jobs. We invest in communities through employment, fair wages, and accessible pricing for all families.</p>
-                </div>
-            </div>
-        </section>
-
-        <!-- Our Journey -->
-        <section class="journey-section">
-            <div class="journey-inner">
-                <h2>Our journey so far</h2>
-                <div class="journey-grid">
-                    <div class="journey-card">
-                        <div class="journey-year">2009</div>
-                        <h4>The Beginning</h4>
-                        <p>Founded our first 5,000 sq ft value retail store in C-Scheme, Jaipur — the start of a mission to make quality affordable.</p>
-                    </div>
-                    <div class="journey-card">
-                        <div class="journey-year">2012</div>
-                        <h4>Rajasthan Footprint</h4>
-                        <p>Expanded to 10 stores across Rajasthan, proving the EDLC-EDLP model works for Indian families.</p>
-                    </div>
-                    <div class="journey-card">
-                        <div class="journey-year">2015</div>
-                        <h4>Multi-State Expansion</h4>
-                        <p>Entered Gujarat and Maharashtra, bringing everyday low prices to new markets and millions more customers.</p>
-                    </div>
-                    <div class="journey-card">
-                        <div class="journey-year">2018</div>
-                        <h4>Going Digital</h4>
-                        <p>Launched online ordering, extending the Laxi Mart experience to customers who prefer doorstep delivery.</p>
-                    </div>
-                    <div class="journey-card">
-                        <div class="journey-year">2021</div>
-                        <h4>50 Store Milestone</h4>
-                        <p>Crossed 50 company-owned stores, serving millions of value-conscious families across 8 states.</p>
-                    </div>
-                    <div class="journey-card">
-                        <div class="journey-year">2024</div>
-                        <h4>85+ Stores Nationwide</h4>
-                        <p>Operating 85+ stores across 12 states with 5,000+ employees, serving 2.5 million customers every month.</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Leadership -->
-        <section class="leadership-section">
-            <div class="leadership-header">
-                <h2>Leadership team</h2>
-                <p>The people driving Laxi Super Mart's vision of value retail forward.</p>
-            </div>
-            <div class="leader-grid">
-                <div class="leader-card">
-                    <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&q=80&w=400" alt="Vikram Sharma" class="leader-photo">
-                    <div class="leader-info">
-                        <h3>Vikram Sharma</h3>
-                        <span class="leader-role">Founder & Managing Director</span>
-                        <p>A Jaipur native with 20+ years in retail. Vikram founded Laxi Mart with the vision of making quality groceries affordable for middle-class Indian families through the EDLC-EDLP model.</p>
-                    </div>
-                </div>
-                <div class="leader-card">
-                    <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&q=80&w=400" alt="Anita Desai" class="leader-photo">
-                    <div class="leader-info">
-                        <h3>Anita Desai</h3>
-                        <span class="leader-role">Chief Operating Officer</span>
-                        <p>Anita oversees store operations, supply chain, and vendor management across all 85+ locations — ensuring consistent quality, pricing, and customer experience at every store.</p>
-                    </div>
-                </div>
-                <div class="leader-card">
-                    <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?auto=format&fit=crop&q=80&w=400" alt="Rohit Agarwal" class="leader-photo">
-                    <div class="leader-info">
-                        <h3>Rohit Agarwal</h3>
-                        <span class="leader-role">Chief Financial Officer</span>
-                        <p>Rohit manages financial strategy, investor relations, and the company's disciplined approach to capital allocation — keeping the EDLC model sustainable as we scale.</p>
-                    </div>
-                </div>
-            </div>
-        </section>
     </main>
 
-    <!-- CTA Banner -->
-    <section class="about-cta">
-        <h2>Join us in our mission</h2>
-        <p>Whether as a customer, vendor, or team member — there's a place for you at Laxi Mart.</p>
-        <div class="about-cta-btns">
-            <a href="careers.html" class="cta-btn-white">View Open Positions</a>
-            <a href="partner.html" class="cta-btn-ghost">Become a Vendor</a>
+    <!-- =============================================
+         STATS BAR — Dark bar (Curat style)
+         ============================================= -->
+    <section style="background: #1a3c34; padding: 56px 20px; margin-top: 80px;">
+        <div style="max-width: 1200px; margin: 0 auto; display: flex; justify-content: space-between; flex-wrap: wrap; gap: 32px; text-align: center;">
+            <div style="flex: 1; min-width: 120px;">
+                <div style="font-size: 48px; font-weight: 800; color: #3b9b78; line-height: 1;">85+</div>
+                <div style="font-size: 13px; color: rgba(255,255,255,0.55); font-weight: 500; margin-top: 6px;">Company-Owned Stores</div>
+            </div>
+            <div style="flex: 1; min-width: 120px;">
+                <div style="font-size: 48px; font-weight: 800; color: #3b9b78; line-height: 1;">12</div>
+                <div style="font-size: 13px; color: rgba(255,255,255,0.55); font-weight: 500; margin-top: 6px;">States & UTs</div>
+            </div>
+            <div style="flex: 1; min-width: 120px;">
+                <div style="font-size: 48px; font-weight: 800; color: #3b9b78; line-height: 1;">5,000+</div>
+                <div style="font-size: 13px; color: rgba(255,255,255,0.55); font-weight: 500; margin-top: 6px;">Team Members</div>
+            </div>
+            <div style="flex: 1; min-width: 120px;">
+                <div style="font-size: 48px; font-weight: 800; color: #3b9b78; line-height: 1;">15+</div>
+                <div style="font-size: 13px; color: rgba(255,255,255,0.55); font-weight: 500; margin-top: 6px;">Years of Trust</div>
+            </div>
+            <div style="flex: 1; min-width: 120px;">
+                <div style="font-size: 48px; font-weight: 800; color: #3b9b78; line-height: 1;">2.5M+</div>
+                <div style="font-size: 13px; color: rgba(255,255,255,0.55); font-weight: 500; margin-top: 6px;">Monthly Customers</div>
+            </div>
         </div>
     </section>
 
-    <!-- Footer -->
-    <footer style="background: #f0f5f2; padding-top: 64px;">
-        <div style="max-width: 1200px; margin: 0 auto; padding: 0 20px;">
-            <div class="footer-grid">
-                <div class="footer-col">
-                    <div style="margin-bottom: 24px; font-size: 24px; font-weight: 400; color: var(--text-dark);"><i class="fas fa-leaf" style="color: var(--primary-green);"></i> Laxi <strong>Mart</strong></div>
-                    <p style="color: var(--text-muted); margin-bottom: 24px;">India's trusted supermart chain — quality groceries, daily essentials, and unbeatable prices across 85+ stores.</p>
-                    <div style="display: flex; gap: 12px;">
-                        <i class="fab fa-cc-visa" style="font-size: 32px; color: var(--text-muted);"></i>
-                        <i class="fab fa-cc-mastercard" style="font-size: 32px; color: var(--text-muted);"></i>
-                        <i class="fab fa-apple-pay" style="font-size: 32px; color: var(--text-muted);"></i>
-                        <i class="fas fa-money-bill-wave" title="Cash on Delivery" style="font-size: 28px; color: var(--text-muted);"></i>
+    <!-- =============================================
+         VALUES — "What's New" card grid design
+         ============================================= -->
+    <div class="container">
+        <section class="whats-new-section">
+            <h2 class="whats-new-heading">What we stand for</h2>
+            <div class="whats-new-grid" style="grid-template-columns: repeat(4, 1fr);">
+                <div class="whats-new-card" style="cursor: default;">
+                    <div class="whats-new-img" style="background: linear-gradient(135deg, #1a3c34, #2d6b54); display: flex; align-items: center; justify-content: center; height: 160px;">
+                        <i class="fas fa-medal" style="font-size: 48px; color: rgba(255,255,255,0.2);"></i>
+                    </div>
+                    <div class="whats-new-info">
+                        <span class="whats-new-tag">Core Value</span>
+                        <h3>Quality First</h3>
+                        <p>Every product passes strict quality checks. We partner directly with trusted brands and verified suppliers to ensure freshness and authenticity.</p>
                     </div>
                 </div>
-                <div class="footer-col">
-                    <h4>Company</h4>
-                    <ul>
-                        <li><a href="about.html">About Us</a></li>
-                        <li><a href="careers.html">Careers</a></li>
-                        <li><a href="partner.html">Partner With Us</a></li>
-                        <li><a href="investors.html">Investors</a></li>
+                <div class="whats-new-card" style="cursor: default;">
+                    <div class="whats-new-img" style="background: linear-gradient(135deg, #2d6b54, #4ea585); display: flex; align-items: center; justify-content: center; height: 160px;">
+                        <i class="fas fa-tags" style="font-size: 48px; color: rgba(255,255,255,0.2);"></i>
+                    </div>
+                    <div class="whats-new-info">
+                        <span class="whats-new-tag">Core Value</span>
+                        <h3>Everyday Low Prices</h3>
+                        <p>No fake discounts or inflated MRPs. Our EDLC-EDLP model means you get the lowest possible price every day — not just during sales.</p>
+                    </div>
+                </div>
+                <div class="whats-new-card" style="cursor: default;">
+                    <div class="whats-new-img" style="background: linear-gradient(135deg, #1a3c34, #3b9b78); display: flex; align-items: center; justify-content: center; height: 160px;">
+                        <i class="fas fa-seedling" style="font-size: 48px; color: rgba(255,255,255,0.2);"></i>
+                    </div>
+                    <div class="whats-new-info">
+                        <span class="whats-new-tag">Core Value</span>
+                        <h3>Local Sourcing</h3>
+                        <p>We source fresh produce from local farmers and regional suppliers, reducing transit time and supporting agriculture across India.</p>
+                    </div>
+                </div>
+                <div class="whats-new-card" style="cursor: default;">
+                    <div class="whats-new-img" style="background: linear-gradient(135deg, #0d1f1a, #1a3c34); display: flex; align-items: center; justify-content: center; height: 160px;">
+                        <i class="fas fa-hands-helping" style="font-size: 48px; color: rgba(255,255,255,0.2);"></i>
+                    </div>
+                    <div class="whats-new-info">
+                        <span class="whats-new-tag">Core Value</span>
+                        <h3>Community First</h3>
+                        <p>Each store creates 50-60 local jobs. We invest in communities through employment, fair wages, and accessible pricing for all families.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- =============================================
+         JOURNEY — Insights carousel design
+         ============================================= -->
+    <section style="background: #f8faf9; padding: 64px 0;">
+        <div class="container">
+            <section class="insights-section" style="padding: 0;">
+                <div class="insights-header">
+                    <h2 class="insights-heading">Our journey so far</h2>
+                    <div class="insights-nav">
+                        <button class="insights-btn insights-prev" aria-label="Previous" disabled><i class="fas fa-arrow-left"></i></button>
+                        <button class="insights-btn insights-next" aria-label="Next"><i class="fas fa-arrow-right"></i></button>
+                    </div>
+                </div>
+                <div class="insights-track-wrapper">
+                    <div class="insights-track" id="insights-track">
+                        <div class="insight-card" style="background: linear-gradient(135deg, #1a3c34, #2d6b54); cursor: default;">
+                            <span class="insight-card-tag" style="background: #dff7d7; color: #1a3c34;">Milestone</span>
+                            <div class="insight-card-bottom" style="position: relative;">
+                                <span class="insight-card-eyebrow">Jaipur, Rajasthan</span>
+                                <h3 class="insight-card-title">The Beginning</h3>
+                                <p style="font-size: 14px; color: rgba(255,255,255,0.6); margin-top: 8px;">Founded our first 5,000 sq ft value retail store in C-Scheme — the start of a mission to make quality affordable.</p>
+                                <div class="insight-card-stat">
+                                    <span class="insight-card-stat-num">2009</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="insight-card" style="background: linear-gradient(135deg, #2d6b54, #4ea585); cursor: default;">
+                            <span class="insight-card-tag" style="background: #dff7d7; color: #1a3c34;">Milestone</span>
+                            <div class="insight-card-bottom" style="position: relative;">
+                                <span class="insight-card-eyebrow">Across Rajasthan</span>
+                                <h3 class="insight-card-title">Rajasthan Footprint</h3>
+                                <p style="font-size: 14px; color: rgba(255,255,255,0.6); margin-top: 8px;">Expanded to 10 stores, proving the EDLC-EDLP model works for Indian families.</p>
+                                <div class="insight-card-stat">
+                                    <span class="insight-card-stat-num">2012</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="insight-card" style="background: linear-gradient(135deg, #1a3c34, #3b9b78); cursor: default;">
+                            <span class="insight-card-tag" style="background: #dff7d7; color: #1a3c34;">Milestone</span>
+                            <div class="insight-card-bottom" style="position: relative;">
+                                <span class="insight-card-eyebrow">Gujarat & Maharashtra</span>
+                                <h3 class="insight-card-title">Multi-State Expansion</h3>
+                                <p style="font-size: 14px; color: rgba(255,255,255,0.6); margin-top: 8px;">Entered two new states, bringing everyday low prices to millions more customers.</p>
+                                <div class="insight-card-stat">
+                                    <span class="insight-card-stat-num">2015</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="insight-card" style="background: linear-gradient(135deg, #0d1f1a, #1a3c34); cursor: default;">
+                            <span class="insight-card-tag" style="background: #dff7d7; color: #1a3c34;">Milestone</span>
+                            <div class="insight-card-bottom" style="position: relative;">
+                                <span class="insight-card-eyebrow">Digital Launch</span>
+                                <h3 class="insight-card-title">Going Online</h3>
+                                <p style="font-size: 14px; color: rgba(255,255,255,0.6); margin-top: 8px;">Launched online ordering, extending the Laxi Mart experience to doorstep delivery.</p>
+                                <div class="insight-card-stat">
+                                    <span class="insight-card-stat-num">2018</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="insight-card" style="background: linear-gradient(135deg, #1a3c34, #2d6b54); cursor: default;">
+                            <span class="insight-card-tag" style="background: #dff7d7; color: #1a3c34;">Milestone</span>
+                            <div class="insight-card-bottom" style="position: relative;">
+                                <span class="insight-card-eyebrow">8 States</span>
+                                <h3 class="insight-card-title">50 Store Milestone</h3>
+                                <p style="font-size: 14px; color: rgba(255,255,255,0.6); margin-top: 8px;">Crossed 50 company-owned stores, serving millions of value-conscious families.</p>
+                                <div class="insight-card-stat">
+                                    <span class="insight-card-stat-num">2021</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="insight-card" style="background: linear-gradient(135deg, #2d6b54, #3b9b78); cursor: default;">
+                            <span class="insight-card-tag" style="background: #dff7d7; color: #1a3c34;">Milestone</span>
+                            <div class="insight-card-bottom" style="position: relative;">
+                                <span class="insight-card-eyebrow">12 States</span>
+                                <h3 class="insight-card-title">85+ Stores Nationwide</h3>
+                                <p style="font-size: 14px; color: rgba(255,255,255,0.6); margin-top: 8px;">Operating across 12 states with 5,000+ employees, serving 2.5M customers monthly.</p>
+                                <div class="insight-card-stat">
+                                    <span class="insight-card-stat-num">2024</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </section>
+
+    <!-- =============================================
+         LEADERSHIP — Feature split rows
+         ============================================= -->
+    <div class="container">
+        <section class="grow-section">
+            <h2 class="grow-heading">Leadership team</h2>
+        </section>
+        <section class="feature-splits" style="padding-bottom: 40px;">
+            <div class="feature-split-row">
+                <div class="feature-split-media">
+                    <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&q=80&w=600" alt="Vikram Sharma" style="width:100%; height:100%; object-fit:cover;">
+                </div>
+                <div class="feature-split-content">
+                    <div style="font-size: 12px; font-weight: 700; text-transform: uppercase; letter-spacing: 2px; color: #3b9b78; margin-bottom: 8px;">Founder & Managing Director</div>
+                    <h3 class="feature-split-title">Vikram Sharma</h3>
+                    <p class="feature-split-desc">A Jaipur native with 20+ years in retail. Vikram founded Laxi Mart with the vision of making quality groceries affordable for middle-class Indian families through the EDLC-EDLP model. Under his leadership, the company has grown from a single store to 85+ locations across India.</p>
+                </div>
+            </div>
+            <div class="feature-split-row reversed">
+                <div class="feature-split-media">
+                    <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&q=80&w=600" alt="Anita Desai" style="width:100%; height:100%; object-fit:cover;">
+                </div>
+                <div class="feature-split-content">
+                    <div style="font-size: 12px; font-weight: 700; text-transform: uppercase; letter-spacing: 2px; color: #3b9b78; margin-bottom: 8px;">Chief Operating Officer</div>
+                    <h3 class="feature-split-title">Anita Desai</h3>
+                    <p class="feature-split-desc">Anita oversees store operations, supply chain, and vendor management across all 85+ locations — ensuring consistent quality, pricing, and customer experience at every store. She has been instrumental in building our direct-from-manufacturer procurement model.</p>
+                </div>
+            </div>
+            <div class="feature-split-row">
+                <div class="feature-split-media">
+                    <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?auto=format&fit=crop&q=80&w=600" alt="Rohit Agarwal" style="width:100%; height:100%; object-fit:cover;">
+                </div>
+                <div class="feature-split-content">
+                    <div style="font-size: 12px; font-weight: 700; text-transform: uppercase; letter-spacing: 2px; color: #3b9b78; margin-bottom: 8px;">Chief Financial Officer</div>
+                    <h3 class="feature-split-title">Rohit Agarwal</h3>
+                    <p class="feature-split-desc">Rohit manages financial strategy, investor relations, and the company's disciplined approach to capital allocation — keeping the EDLC model sustainable as we scale. His focus on operational efficiency has been key to maintaining margins while keeping prices low.</p>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- =============================================
+         CTA — Testimonial card design (dark rounded)
+         ============================================= -->
+    <div class="container">
+        <section class="testimonial-card" style="margin-bottom: 0;">
+            <div class="testimonial-text">
+                <h2 class="testimonial-quote">Join us in our mission to make quality affordable for every Indian family.</h2>
+                <p class="testimonial-author">Whether as a customer, vendor, or team member — there's a place for you at Laxi Mart.</p>
+                <div style="display: flex; gap: 14px; flex-wrap: wrap; margin-top: 8px;">
+                    <a href="careers.html" class="testimonial-cta">View Open Positions</a>
+                    <a href="partner.html" class="testimonial-cta">Become a Vendor</a>
+                </div>
+            </div>
+            <div class="testimonial-media" style="min-height: 300px;">
+                <img src="https://images.unsplash.com/photo-1542838132-92c53300491e?auto=format&fit=crop&q=80&w=600" alt="Fresh produce at Laxi Mart" class="testimonial-thumb" style="min-height: 300px;">
+            </div>
+        </section>
+    </div>
+
+    <!-- =============================================
+         FOOTER — Dark (same as landing page)
+         ============================================= -->
+    <footer style="background: #1a3c34; padding-top: 48px; color: rgba(255,255,255,0.6); margin-top: 80px;">
+        <div style="max-width: 1200px; margin: 0 auto; padding: 0 20px;">
+            <div style="display: flex; justify-content: space-between; flex-wrap: wrap; gap: 40px; padding-bottom: 40px; border-bottom: 1px solid rgba(255,255,255,0.1);">
+                <div style="max-width: 300px;">
+                    <div style="margin-bottom: 20px; font-size: 24px; font-weight: 400; color: #fff;"><i class="fas fa-leaf" style="color: #3b9b78;"></i> Laxi <strong>Mart</strong></div>
+                    <p style="font-size: 14px; line-height: 1.6;">Good Products, Great Value. India's trusted value retail chain with 85+ company-owned stores across 12 states.</p>
+                </div>
+                <div>
+                    <h4 style="color: #fff; font-size: 13px; font-weight: 700; margin-bottom: 16px; text-transform: uppercase; letter-spacing: 1.5px;">Company</h4>
+                    <ul style="list-style: none; padding: 0; display: flex; flex-direction: column; gap: 10px; font-size: 14px;">
+                        <li><a href="about.html" style="color: rgba(255,255,255,0.55); text-decoration: none;">About Us</a></li>
+                        <li><a href="careers.html" style="color: rgba(255,255,255,0.55); text-decoration: none;">Careers</a></li>
+                        <li><a href="partner.html" style="color: rgba(255,255,255,0.55); text-decoration: none;">Partner With Us</a></li>
+                        <li><a href="investors.html" style="color: rgba(255,255,255,0.55); text-decoration: none;">Investor Relations</a></li>
                     </ul>
                 </div>
-                                <div class="footer-col">
-                    <h4>Legal</h4>
-                    <ul>
-                        <li><a href="privacy.html">Privacy Policy</a></li>
-                        <li><a href="terms.html">Terms of Use</a></li>
+                <div>
+                    <h4 style="color: #fff; font-size: 13px; font-weight: 700; margin-bottom: 16px; text-transform: uppercase; letter-spacing: 1.5px;">Sitemap</h4>
+                    <ul style="list-style: none; padding: 0; display: flex; flex-direction: column; gap: 10px; font-size: 14px;">
+                        <li><a href="privacy.html" style="color: rgba(255,255,255,0.55); text-decoration: none;">Privacy Policy</a></li>
+                        <li><a href="terms.html" style="color: rgba(255,255,255,0.55); text-decoration: none;">Terms of Use</a></li>
+                        <li><a href="investors.html" style="color: rgba(255,255,255,0.55); text-decoration: none;">Investor Relations</a></li>
                     </ul>
                 </div>
-                <div class="footer-col">
-                    <h4>Connect</h4>
-                    <ul>
-                        <li><a href="contact.html">Contact Us</a></li>
-                        <li><a href="stores.html">Store Locator</a></li>
-                        <li>support@laximart.in</li>
-                        <li>+91 98765 43210</li>
+                <div>
+                    <h4 style="color: #fff; font-size: 13px; font-weight: 700; margin-bottom: 16px; text-transform: uppercase; letter-spacing: 1.5px;">Connect</h4>
+                    <ul style="list-style: none; padding: 0; display: flex; flex-direction: column; gap: 10px; font-size: 14px;">
+                        <li><a href="contact.html" style="color: rgba(255,255,255,0.55); text-decoration: none;">Contact Us</a></li>
+                        <li><a href="stores.html" style="color: rgba(255,255,255,0.55); text-decoration: none;">Store Locator</a></li>
+                        <li style="color: rgba(255,255,255,0.4);">care@laximart.in</li>
+                        <li style="color: rgba(255,255,255,0.4);">1800-123-4567</li>
                     </ul>
                 </div>
             </div>
         </div>
-        <div class="footer-bottom">
-            <span>&copy; 2026 Laxi Super Mart. All rights reserved.</span>
-            <div class="footer-social">
-                <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
-                <a href="#" aria-label="X"><i class="fab fa-x-twitter"></i></a>
-                <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
-                <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+        <div style="max-width: 1200px; margin: 0 auto; padding: 20px; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 12px; font-size: 13px;">
+            <span>&copy; 2026 Laxi Super Mart Pvt. Ltd. All rights reserved.</span>
+            <div style="display: flex; gap: 16px;">
+                <a href="#" style="color: rgba(255,255,255,0.4); font-size: 18px;"><i class="fab fa-facebook-f"></i></a>
+                <a href="#" style="color: rgba(255,255,255,0.4); font-size: 18px;"><i class="fab fa-x-twitter"></i></a>
+                <a href="#" style="color: rgba(255,255,255,0.4); font-size: 18px;"><i class="fab fa-instagram"></i></a>
+                <a href="#" style="color: rgba(255,255,255,0.4); font-size: 18px;"><i class="fab fa-youtube"></i></a>
             </div>
         </div>
     </footer>
