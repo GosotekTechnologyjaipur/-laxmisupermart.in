@@ -418,60 +418,54 @@
          STORE CATEGORIES — Premium icon card grid
          ============================================= -->
     <style>
-        .sc-section { background: #1a3c34; padding: 80px 0; }
+        .sc-section { background: #f8faf9; padding: 80px 0; }
         .sc-inner { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
         .sc-header { display: flex; justify-content: space-between; align-items: flex-end; margin-bottom: 40px; flex-wrap: wrap; gap: 16px; }
-        .sc-header h2 { font-size: 36px; font-weight: 300; color: #fff; letter-spacing: -0.4px; }
-        .sc-header p { font-size: 14px; color: rgba(255,255,255,0.45); }
+        .sc-header h2 { font-size: 36px; font-weight: 300; color: #1a3c34; letter-spacing: -0.4px; }
+        .sc-header p { font-size: 15px; color: #6a6b76; }
         .sc-grid {
             display: grid;
             grid-template-columns: repeat(4, 1fr);
             gap: 16px;
         }
         .sc-card {
-            background: rgba(255,255,255,0.06);
-            border: 1px solid rgba(255,255,255,0.08);
-            border-radius: 16px;
-            padding: 24px 20px;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            gap: 12px;
-            text-align: center;
-            transition: all 0.3s;
-            cursor: default;
+            position: relative;
+            border-radius: 18px;
+            overflow: hidden;
+            aspect-ratio: 1/1;
+            cursor: pointer;
+            transition: transform 0.3s;
         }
-        .sc-card:hover {
-            background: rgba(255,255,255,0.1);
-            border-color: rgba(59,155,120,0.4);
-            transform: translateY(-3px);
+        .sc-card:hover { transform: translateY(-5px); }
+        .sc-card img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+            transition: transform 0.4s;
         }
-        .sc-card-icon {
-            width: 52px;
-            height: 52px;
-            border-radius: 14px;
-            background: rgba(59,155,120,0.15);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 22px;
-            color: #3b9b78;
-            transition: all 0.3s;
-        }
-        .sc-card:hover .sc-card-icon {
-            background: #3b9b78;
-            color: #fff;
+        .sc-card:hover img { transform: scale(1.08); }
+        .sc-card::after {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(transparent 30%, rgba(26,60,52,0.8) 100%);
+            pointer-events: none;
         }
         .sc-card span {
-            font-size: 13px;
-            font-weight: 600;
-            color: rgba(255,255,255,0.75);
-            line-height: 1.3;
+            position: absolute;
+            bottom: 14px;
+            left: 16px;
+            right: 16px;
+            z-index: 2;
+            font-size: 14px;
+            font-weight: 700;
+            color: #fff;
+            line-height: 1.25;
         }
-        .sc-card:hover span { color: #fff; }
 
         @media (max-width: 1024px) { .sc-grid { grid-template-columns: repeat(4, 1fr); gap: 12px; } }
-        @media (max-width: 768px) { .sc-grid { grid-template-columns: repeat(3, 1fr); } .sc-card { padding: 18px 14px; } .sc-card-icon { width: 44px; height: 44px; font-size: 18px; } .sc-card span { font-size: 12px; } }
+        @media (max-width: 768px) { .sc-grid { grid-template-columns: repeat(3, 1fr); } .sc-card span { font-size: 12px; bottom: 10px; left: 12px; } }
         @media (max-width: 480px) { .sc-grid { grid-template-columns: repeat(2, 1fr); } }
 
         /* CONTACT SECTION */
@@ -560,22 +554,22 @@
                 </div>
             </div>
             <div class="sc-grid">
-                <div class="sc-card"><div class="sc-card-icon"><i class="fas fa-wheat-awn"></i></div><span>Grocery & Staples</span></div>
-                <div class="sc-card"><div class="sc-card-icon"><i class="fas fa-basket-shopping"></i></div><span>Daily Essentials</span></div>
-                <div class="sc-card"><div class="sc-card-icon"><i class="fas fa-snowflake"></i></div><span>Dairy & Frozen</span></div>
-                <div class="sc-card"><div class="sc-card-icon"><i class="fas fa-tag"></i></div><span>Laxi Mart Brands</span></div>
-                <div class="sc-card"><div class="sc-card-icon"><i class="fas fa-pump-soap"></i></div><span>Home & Personal Care</span></div>
-                <div class="sc-card"><div class="sc-card-icon"><i class="fas fa-bed"></i></div><span>Bed & Bath</span></div>
-                <div class="sc-card"><div class="sc-card-icon"><i class="fas fa-blender"></i></div><span>Home Appliances</span></div>
-                <div class="sc-card"><div class="sc-card-icon"><i class="fas fa-mug-hot"></i></div><span>Crockery</span></div>
-                <div class="sc-card"><div class="sc-card-icon"><i class="fas fa-shoe-prints"></i></div><span>Footwear</span></div>
-                <div class="sc-card"><div class="sc-card-icon"><i class="fas fa-suitcase-rolling"></i></div><span>Luggage</span></div>
-                <div class="sc-card"><div class="sc-card-icon"><i class="fas fa-puzzle-piece"></i></div><span>Toys & Games</span></div>
-                <div class="sc-card"><div class="sc-card-icon"><i class="fas fa-box"></i></div><span>Plastic Containers</span></div>
-                <div class="sc-card"><div class="sc-card-icon"><i class="fas fa-child"></i></div><span>Kid's Apparel</span></div>
-                <div class="sc-card"><div class="sc-card-icon"><i class="fas fa-vest"></i></div><span>Women's Apparel</span></div>
-                <div class="sc-card"><div class="sc-card-icon"><i class="fas fa-shirt"></i></div><span>Men's Apparel</span></div>
-                <div class="sc-card"><div class="sc-card-icon"><i class="fas fa-apple-whole"></i></div><span>Fruits & Vegetables</span></div>
+                <div class="sc-card"><img src="https://images.unsplash.com/photo-1604719312566-8912e9227c6a?auto=format&fit=crop&q=80&w=300" alt="Grocery"><span>Grocery & Staples</span></div>
+                <div class="sc-card"><img src="https://images.unsplash.com/photo-1583947215259-38e31be8751f?auto=format&fit=crop&q=80&w=300" alt="Daily Essentials"><span>Daily Essentials</span></div>
+                <div class="sc-card"><img src="https://images.unsplash.com/photo-1563636619-e91000f21fca?auto=format&fit=crop&q=80&w=300" alt="Dairy"><span>Dairy & Frozen</span></div>
+                <div class="sc-card"><img src="https://images.unsplash.com/photo-1607082349566-187342175e2f?auto=format&fit=crop&q=80&w=300" alt="Laxi Brands"><span>Laxi Mart Brands</span></div>
+                <div class="sc-card"><img src="https://images.unsplash.com/photo-1556228578-0d85b1a4d571?auto=format&fit=crop&q=80&w=300" alt="Home Care"><span>Home & Personal Care</span></div>
+                <div class="sc-card"><img src="https://images.unsplash.com/photo-1616627561950-9f746e330187?auto=format&fit=crop&q=80&w=300" alt="Bed Bath"><span>Bed & Bath</span></div>
+                <div class="sc-card"><img src="https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?auto=format&fit=crop&q=80&w=300" alt="Appliances"><span>Home Appliances</span></div>
+                <div class="sc-card"><img src="https://images.unsplash.com/photo-1514228742587-6b1558fcca3d?auto=format&fit=crop&q=80&w=300" alt="Crockery"><span>Crockery</span></div>
+                <div class="sc-card"><img src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?auto=format&fit=crop&q=80&w=300" alt="Footwear"><span>Footwear</span></div>
+                <div class="sc-card"><img src="https://images.unsplash.com/photo-1553062407-98eeb64c6a62?auto=format&fit=crop&q=80&w=300" alt="Luggage"><span>Luggage</span></div>
+                <div class="sc-card"><img src="https://images.unsplash.com/photo-1587654780291-39c9404d7dd0?auto=format&fit=crop&q=80&w=300" alt="Toys"><span>Toys & Games</span></div>
+                <div class="sc-card"><img src="https://images.unsplash.com/photo-1610557892470-55d9e80c0bce?auto=format&fit=crop&q=80&w=300" alt="Containers"><span>Plastic Containers</span></div>
+                <div class="sc-card"><img src="https://images.unsplash.com/photo-1519238263530-99bdd11df2ea?auto=format&fit=crop&q=80&w=300" alt="Kids Apparel"><span>Kid's Apparel</span></div>
+                <div class="sc-card"><img src="https://images.unsplash.com/photo-1583391733956-6c78276477e2?auto=format&fit=crop&q=80&w=300" alt="Womens Apparel"><span>Women's Apparel</span></div>
+                <div class="sc-card"><img src="https://images.unsplash.com/photo-1602810318383-e386cc2a3ccf?auto=format&fit=crop&q=80&w=300" alt="Mens Apparel"><span>Men's Apparel</span></div>
+                <div class="sc-card"><img src="https://images.unsplash.com/photo-1610832958506-aa56368176cf?auto=format&fit=crop&q=80&w=300" alt="Fruits Vegetables"><span>Fruits & Vegetables</span></div>
             </div>
         </div>
     </section>
