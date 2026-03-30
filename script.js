@@ -92,20 +92,20 @@ function setupInsightsCarousel() {
 // ========================================
 const products = [
     // Grocery & Staples
-    { id: 1, title: "Laxi Gold Toor Dal", weight: "1kg", price: 129, oldPrice: 159, discount: "19% OFF", image: "https://images.unsplash.com/photo-1585996959969-1a561066bab5?auto=format&fit=crop&q=80&w=300", category: "Grocery & Staples" },
+    { id: 1, title: "Laxi Gold Toor Dal", weight: "1kg", price: 129, oldPrice: 159, discount: "19% OFF", image: "https://images.unsplash.com/photo-1586201375761-83865001e31c?auto=format&fit=crop&q=80&w=300", category: "Grocery & Staples" },
     { id: 2, title: "India Gate Basmati Rice", weight: "5kg", price: 449, oldPrice: 540, discount: "17% OFF", image: "https://images.unsplash.com/photo-1586201375761-83865001e31c?auto=format&fit=crop&q=80&w=300", category: "Grocery & Staples" },
     { id: 3, title: "Aashirvaad Whole Wheat Atta", weight: "5kg", price: 199, oldPrice: 235, discount: "15% OFF", image: "https://images.unsplash.com/photo-1574323347407-f5e1ad6d020b?auto=format&fit=crop&q=80&w=300", category: "Grocery & Staples" },
     { id: 4, title: "Fortune Sunlite Oil", weight: "1L", price: 119, oldPrice: 145, discount: "18% OFF", image: "https://images.unsplash.com/photo-1474979266404-7eaacbcd87c5?auto=format&fit=crop&q=80&w=300", category: "Grocery & Staples" },
     // Fruits & Vegetables
     { id: 5, title: "Fresh Organic Broccoli", weight: "500g", price: 120, oldPrice: 150, discount: "20% OFF", image: "https://images.unsplash.com/photo-1584270354949-c26b0d5b4a0c?auto=format&fit=crop&q=80&w=300", category: "Fruits & Vegetables" },
-    { id: 6, title: "Red Gala Apples", weight: "1kg", price: 180, oldPrice: 220, discount: "18% OFF", image: "https://images.unsplash.com/photo-1560806887-1e4cd0b6bcd6?auto=format&fit=crop&q=80&w=300", category: "Fruits & Vegetables" },
+    { id: 6, title: "Red Gala Apples", weight: "1kg", price: 180, oldPrice: 220, discount: "18% OFF", image: "https://images.unsplash.com/photo-1570913149827-d2ac84ab3f9a?auto=format&fit=crop&q=80&w=300", category: "Fruits & Vegetables" },
     { id: 7, title: "Organic Carrots", weight: "500g", price: 40, oldPrice: 60, discount: "33% OFF", image: "https://images.unsplash.com/photo-1598170845058-32b9d6a5da37?auto=format&fit=crop&q=80&w=300", category: "Fruits & Vegetables" },
-    { id: 8, title: "Fresh Strawberries", weight: "250g", price: 150, oldPrice: 200, discount: "25% OFF", image: "https://images.unsplash.com/photo-1464960350295-99573839bc2c?auto=format&fit=crop&q=80&w=300", category: "Fruits & Vegetables" },
+    { id: 8, title: "Fresh Strawberries", weight: "250g", price: 150, oldPrice: 200, discount: "25% OFF", image: "https://images.unsplash.com/photo-1543528176-61b239494933?auto=format&fit=crop&q=80&w=300", category: "Fruits & Vegetables" },
     // Dairy & Frozen
-    { id: 9, title: "Amul Taaza Toned Milk", weight: "1L", price: 54, oldPrice: 56, discount: "4% OFF", image: "https://images.unsplash.com/photo-1563636619-e91000f21fca?auto=format&fit=crop&q=80&w=300", category: "Dairy & Frozen" },
+    { id: 9, title: "Amul Taaza Toned Milk", weight: "1L", price: 54, oldPrice: 56, discount: "4% OFF", image: "https://images.unsplash.com/photo-1550583724-b2692b85b150?auto=format&fit=crop&q=80&w=300", category: "Dairy & Frozen" },
     { id: 10, title: "Fresh Paneer Block", weight: "200g", price: 85, oldPrice: 100, discount: "15% OFF", image: "https://images.unsplash.com/photo-1631452180519-c014fe946bc7?auto=format&fit=crop&q=80&w=300", category: "Dairy & Frozen" },
-    { id: 11, title: "Brown Eggs (Dozen)", weight: "12 units", price: 90, oldPrice: 110, discount: "18% OFF", image: "https://images.unsplash.com/photo-1582722872445-44ad5c78a9dd?auto=format&fit=crop&q=80&w=300", category: "Dairy & Frozen" },
-    { id: 12, title: "Frozen Green Peas", weight: "500g", price: 65, oldPrice: 80, discount: "19% OFF", image: "https://images.unsplash.com/photo-1563636619-e91000f21fca?auto=format&fit=crop&q=80&w=300", category: "Dairy & Frozen" },
+    { id: 11, title: "Brown Eggs (Dozen)", weight: "12 units", price: 90, oldPrice: 110, discount: "18% OFF", image: "https://images.unsplash.com/photo-1498654077810-12c21d4d6dc3?auto=format&fit=crop&q=80&w=300", category: "Dairy & Frozen" },
+    { id: 12, title: "Frozen Green Peas", weight: "500g", price: 65, oldPrice: 80, discount: "19% OFF", image: "https://images.unsplash.com/photo-1550583724-b2692b85b150?auto=format&fit=crop&q=80&w=300", category: "Dairy & Frozen" },
     // Home & Personal Care
     { id: 13, title: "Surf Excel Matic Liquid", weight: "1L", price: 189, oldPrice: 225, discount: "16% OFF", image: "https://images.unsplash.com/photo-1585421514284-efb74c2b69ba?auto=format&fit=crop&q=80&w=300", category: "Home & Personal Care" },
     { id: 14, title: "Dove Daily Shine Shampoo", weight: "340ml", price: 175, oldPrice: 210, discount: "17% OFF", image: "https://images.unsplash.com/photo-1631729371254-42c2892f0e6e?auto=format&fit=crop&q=80&w=300", category: "Home & Personal Care" },
@@ -113,13 +113,13 @@ const products = [
     // Bed & Bath
     { id: 16, title: "Cotton Bath Towel Set", weight: "2 pcs", price: 450, oldPrice: 599, discount: "25% OFF", image: "https://images.unsplash.com/photo-1616627561950-9f746e330187?auto=format&fit=crop&q=80&w=300", category: "Bed & Bath" },
     { id: 17, title: "Premium Bed Sheet Set", weight: "Double", price: 899, oldPrice: 1200, discount: "25% OFF", image: "https://images.unsplash.com/photo-1522771739844-6a9f6d5f14af?auto=format&fit=crop&q=80&w=300", category: "Bed & Bath" },
-    { id: 18, title: "Memory Foam Pillow", weight: "1 pc", price: 599, oldPrice: 799, discount: "25% OFF", image: "https://images.unsplash.com/photo-1592789705501-f9ae4287c4b9?auto=format&fit=crop&q=80&w=300", category: "Bed & Bath" },
+    { id: 18, title: "Memory Foam Pillow", weight: "1 pc", price: 599, oldPrice: 799, discount: "25% OFF", image: "https://images.unsplash.com/photo-1584100936595-c0654b55a2e2?auto=format&fit=crop&q=80&w=300", category: "Bed & Bath" },
     // Crockery
     { id: 19, title: "Dinner Set (24 pcs)", weight: "Set", price: 1450, oldPrice: 1800, discount: "19% OFF", image: "https://images.unsplash.com/photo-1603199506016-b9a594b593c0?auto=format&fit=crop&q=80&w=300", category: "Crockery" },
     { id: 20, title: "Ceramic Coffee Mugs", weight: "4 pcs", price: 320, oldPrice: 400, discount: "20% OFF", image: "https://images.unsplash.com/photo-1514228742587-6b1558fcca3d?auto=format&fit=crop&q=80&w=300", category: "Crockery" },
     { id: 21, title: "Glass Tumbler Set", weight: "6 pcs", price: 280, oldPrice: 350, discount: "20% OFF", image: "https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?auto=format&fit=crop&q=80&w=300", category: "Crockery" },
     // Toys & Games
-    { id: 22, title: "Building Blocks Set", weight: "200 pcs", price: 650, oldPrice: 850, discount: "24% OFF", image: "https://images.unsplash.com/photo-1587654780291-39c9404d7dd0?auto=format&fit=crop&q=80&w=300", category: "Toys & Games" },
+    { id: 22, title: "Building Blocks Set", weight: "200 pcs", price: 650, oldPrice: 850, discount: "24% OFF", image: "https://images.unsplash.com/photo-1596461404969-9ae70f2830c1?auto=format&fit=crop&q=80&w=300", category: "Toys & Games" },
     { id: 23, title: "Classic Board Game", weight: "1 set", price: 350, oldPrice: 450, discount: "22% OFF", image: "https://images.unsplash.com/photo-1610890716171-6b1bb98ffd09?auto=format&fit=crop&q=80&w=300", category: "Toys & Games" },
     { id: 24, title: "Soft Teddy Bear", weight: "Medium", price: 399, oldPrice: 550, discount: "27% OFF", image: "https://images.unsplash.com/photo-1559715541-5daf8a0296d0?auto=format&fit=crop&q=80&w=300", category: "Toys & Games" },
     // Men's Apparel
@@ -127,7 +127,7 @@ const products = [
     { id: 26, title: "Casual Chino Trousers", weight: "32/34/36", price: 699, oldPrice: 999, discount: "30% OFF", image: "https://images.unsplash.com/photo-1473966968600-fa801b869a1a?auto=format&fit=crop&q=80&w=300", category: "Men's Apparel" },
     { id: 27, title: "Formal Cotton Shirt", weight: "M/L/XL", price: 599, oldPrice: 799, discount: "25% OFF", image: "https://images.unsplash.com/photo-1602810318383-e386cc2a3ccf?auto=format&fit=crop&q=80&w=300", category: "Men's Apparel" },
     // Women's Apparel
-    { id: 28, title: "Printed Cotton Kurti", weight: "S/M/L", price: 449, oldPrice: 650, discount: "31% OFF", image: "https://images.unsplash.com/photo-1583391733956-6c78276477e2?auto=format&fit=crop&q=80&w=300", category: "Women's Apparel" },
+    { id: 28, title: "Printed Cotton Kurti", weight: "S/M/L", price: 449, oldPrice: 650, discount: "31% OFF", image: "https://images.unsplash.com/photo-1567401893414-76b7b1e5a7a5?auto=format&fit=crop&q=80&w=300", category: "Women's Apparel" },
     { id: 29, title: "Stretch Leggings", weight: "Free Size", price: 299, oldPrice: 399, discount: "25% OFF", image: "https://images.unsplash.com/photo-1506629082955-511b1aa562c8?auto=format&fit=crop&q=80&w=300", category: "Women's Apparel" },
     { id: 30, title: "Dupatta Set (3 pcs)", weight: "Set", price: 350, oldPrice: 500, discount: "30% OFF", image: "https://images.unsplash.com/photo-1610030469983-98e550d6193c?auto=format&fit=crop&q=80&w=300", category: "Women's Apparel" },
     // Footwear
